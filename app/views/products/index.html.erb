@@ -1,6 +1,6 @@
 <%= @cart.join(', ')%>
 
-<%= form_tag('/products/add', method: post) do %>
+<%= form_tag('/products/add', method: 'post') do %>
   <%= text_field_tag :product %>
   <%= submit_tag 'add to cart' %>
 <% end %>
