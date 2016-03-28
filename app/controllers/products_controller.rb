@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   def add
     # Load the cart from the session, or create a new empty cart.
   cart = session[:cart] || []
-  cart << item
+  cart << params[:item]
   # Save the cart in the session.
   session[:cart] = cart
   redirect_to products_path

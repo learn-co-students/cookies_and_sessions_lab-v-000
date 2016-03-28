@@ -5,7 +5,7 @@
   <% if @cart.nil? %>
   <p>Your cart is empty</p>
   <% else %>
-    <%= @cart.each do |item| %>
+    <% @cart.each do |item| %>
   <li>
     <%= item %>
   </li>
