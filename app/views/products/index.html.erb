@@ -1,0 +1,9 @@
+<h1>Add a Product to your Cart</h1>
+<%= form_tag products_add_path do %> 
+  <%= label_tag :product %>: 
+  <%= text_field_tag :product %> 
+  <%= submit_tag "add to cart" %>
+<% end %>
+<h2>Shopping Cart:</h2>
+<%= cart_count(@cart) %>
+<%= list_items_in_cart(@cart) %>
