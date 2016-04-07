@@ -1,0 +1,12 @@
+<h1>Products#index</h1>
+
+<h3>Here's what you got: </h3>
+  <% @cart.each do |i| %>
+    <%= i %>
+  <% end %>
+
+<h4>Want more shit? add it here:</h4>
+<form action="products/add" method="get">
+  <input type="text" name="cart_items">
+  <input type="submit" >
+</form>
