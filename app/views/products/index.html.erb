@@ -1,0 +1,9 @@
+<h1>Products Index</h1>
+
+<%= form_tag add_product_path do %>
+  <%= text_field_tag :item %>
+  <%= submit_tag "Add Item" %>
+<% end %>
+  
+<h2>You Currenty Have:</h2>
+<%= @cart.join ', ' %>
