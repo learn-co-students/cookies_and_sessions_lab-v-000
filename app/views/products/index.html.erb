@@ -1,0 +1,8 @@
+
+<%@cart.each do |product|%>
+  <%=product%>
+<%end%>
+
+<%=form_tag("/products/new") do %>
+  <%=text_field_tag "product"%>
+<%end%>
