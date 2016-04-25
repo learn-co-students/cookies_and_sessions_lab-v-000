@@ -1,0 +1,10 @@
+
+
+
+<%= @cart.join ', ' %>
+
+
+ <%= form_tag('/products/add', method: 'post') do %>
+  <input name='product'>
+  <input type=submit value='add to cart'>
+<% end %>
