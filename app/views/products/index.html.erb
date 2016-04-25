@@ -1,0 +1,14 @@
+<h1>Flatiron Shopping Website</h1>
+<%= form_tag products_add_path do %>
+  <%= label_tag "Product" %>
+  <%= text_field_tag "product" %>
+
+  <%= submit_tag "add to cart"%>
+<% end %>
+<br>
+<%= label_tag "Shopping Cart" %><br>
+<ul>
+  <% @cart.each do |item| %>
+    <li><%= item %></li>
+  <% end %>
+</ul>
