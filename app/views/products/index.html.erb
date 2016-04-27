@@ -1,0 +1,7 @@
+
+<ul>
+<% @cart.each do |item| %>
+  <li><%= item %></li>
+  <%= button_to "Add", action: "add" %>
+<% end %>
+</ul>
