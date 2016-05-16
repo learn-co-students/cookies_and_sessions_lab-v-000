@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'pry'
 
 RSpec.describe "products/index", :type => :view do
   it "shows everythig in the cart" do
