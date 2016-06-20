@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root "products#index"
+
+   #submit button on index should post to index, and route to products#add
+   post "/" => "products#add"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
