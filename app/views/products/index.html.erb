@@ -1,0 +1,13 @@
+<h1>Your Cart</h1>
+
+<% if @cart.empty? %>
+  <p>Is currently empty.</p>
+<% else %>
+  <%= @cart.join(", ") %>
+<% end %>
+
+<h1>Add an item:</h1>
+<%= form_tag({:controller => "products", :action => "add", :method => "post"}) do %>
+  <input type="text" name="product">
+  <input type="submit" value="add to cart">
+<% end %>
