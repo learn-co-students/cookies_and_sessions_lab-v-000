@@ -1,0 +1,19 @@
+Your Cart Contains:<br>
+
+<% if @cart.empty? %>
+  Nothing.  It is empty.  Like your promises.<br>
+<% else %>
+  <% @cart.each do |product| %>
+	<%= product %><br>
+  <% end %>
+<% end %>
+<br>
+Add an Item:<br>
+<%= form_tag("/products", method: "add") do %>
+  <%=text_field_tag(:product) %>
+  <%= submit_tag("add to cart") %><br>
+<% end %>
+<br>
+<%= link_to "Clear Cart", products_path, :method => :delete %>
+
+
