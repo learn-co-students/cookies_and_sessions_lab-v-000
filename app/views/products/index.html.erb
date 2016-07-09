@@ -1,0 +1,6 @@
+<%= @cart.inspect %>
+<%= form_tag("/products") do %>
+  <%= label_tag(:product) %>
+  <%= text_field_tag(:product) %>
+  <%= submit_tag("add to cart") %>
+<% end %>
