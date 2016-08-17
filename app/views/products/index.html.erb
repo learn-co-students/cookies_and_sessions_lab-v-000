@@ -1,0 +1,8 @@
+<%binding.pry%>
+<%if @products%>
+  <ul>
+    <%@products.each do |product|%>
+      <li><%=product%></li>
+    <%end%>
+  </ul>
+<%end%>
