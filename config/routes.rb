@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/' => 'products#new'
   post '/products' => 'products#add'
   get '/products' => 'products#index'
+  get '/products/index' => 'products#index'
+
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
