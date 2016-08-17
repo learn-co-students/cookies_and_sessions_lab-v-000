@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h2>Your Cart:</h2>
+  <ul>
+  <% if @cart %>
+    <% @cart.each do |product| %>
+      <li><%= product %></li>
+      <% end %>
+  <% else %>
+    <li>Your cart is empty!</li>
+  <% end %>
+  </ul>
+
+  <br>
+
+<h3>Add a new product to your cart:</h3>
+  <%= form_tag('/add') do %>
+    <%= label_tag :product %>
+    <%= text_field_tag :product %>
+    <%= submit_tag "add to cart" %>
+<% end %>
+</body>
+</html>
