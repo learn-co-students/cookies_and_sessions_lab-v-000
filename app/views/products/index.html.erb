@@ -1,0 +1,10 @@
+<h1>Products</h1>
+<div>
+  <h2>On your cart</h2>
+  <%= @cart.join ',' %>
+</div>
+
+<%= form_for(:products, action: :add ,method: :post) do |f|%>
+  <%= f.text_field :product, placeholder: "Product" %><br>
+  <%= f.submit "add to cart" %>
+<% end %>
