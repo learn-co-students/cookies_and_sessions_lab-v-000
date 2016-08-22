@@ -1,0 +1,18 @@
+<ul>
+    <% binding.pry%>
+
+      <li>
+        <%=i%>
+      </li>
+      <%end%>
+</ul>
+
+<%= form_tag 'products/add', method: :post, class: "navbar-form navbar-left search-form" do %>
+  <%= text_field_tag(
+      :product,
+      params[:product],
+      placeholder: "Input Item",
+      class: "form-control",
+      id: "product"
+  ) %>
+<% end %>
