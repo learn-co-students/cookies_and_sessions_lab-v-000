@@ -1,16 +1,12 @@
-<ul>
-    <%= @items.each do |i| %>
-      <li>
-        <%=i%>
-      </li>
-      <%end%>
-</ul>
+<%=@cart.join(" ,")%>
 
 <%= form_tag 'products/add', method: :post, class: "navbar-form navbar-left search-form" do %>
   <%= text_field_tag(
-      :item,
-      params[:item],
+      :product,
+      params[:product],
       placeholder: "Input Item",
-      class: "form-control"
+      class: "form-control",
+      id: "product"
   ) %>
+  <button type="submit" name="add to cart">add to cart</button>
 <% end %>
