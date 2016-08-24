@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root to: 'products#index'
-  post '/products/add', to: 'products#add'
+  post '/', to: 'products#add'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

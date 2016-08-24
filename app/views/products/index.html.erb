@@ -1,6 +1,10 @@
-<h1>Products#index</h1>
+<h2>Add products to your cart</h2>
 
-<%= form_tag(products_add_path) do %>
+<%#= form_tag({controller: 'products',
+  action: 'add',
+  method: 'post'}) do %>
+
+<%= form_tag('/') do %>
   <%= text_field_tag :product, params[:product], placeholder: "e.g. Marshmallows" %>
   <%= submit_tag "add to cart" %>
 <% end %>
