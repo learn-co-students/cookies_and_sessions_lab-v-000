@@ -1,0 +1,6 @@
+<%= @cart.join(', ') if @cart %>
+
+<%= form_tag add_product_path do %>
+  <%= text_field_tag :product %>
+  <%= submit_tag 'add to cart' %>
+<% end %>
