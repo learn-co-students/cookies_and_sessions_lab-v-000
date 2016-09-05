@@ -10,3 +10,15 @@
   <li><%= item %></li>
   <% end %>
 </ul>
+
+<!-- actual solution 
+
+<%= @cart.join ', ' %>
+
+<%= form_tag ({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
+
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %> -->
