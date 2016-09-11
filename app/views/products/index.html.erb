@@ -1,0 +1,24 @@
+<%= form_tag products_path method: "post" do %>
+<h2>To add an item, enter the name and hit 'add to cart'</h2>
+<%= text_field_tag :product %>
+<%= submit_tag "add to cart" %>
+<% end %>
+
+<h2>Here are the items in your cart, if any: </h2>
+<ul>
+<% @cart.each do |item| %>
+  <li><%= item %></li>
+  <% end %>
+</ul>
+
+<!-- actual solution 
+
+<%= @cart.join ', ' %>
+
+<%= form_tag ({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
+
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %> -->
