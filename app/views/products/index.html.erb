@@ -1,0 +1,8 @@
+<h1>Products#index</h1>
+<p>Find me in app/views/products/index.html.erb</p>
+
+<%= @cart %>
+<%= form_tag('/') do %>
+  <%= text_field_tag :product, params[:product] %>
+  <%= submit_tag "add to cart" %>
+<% end %>
