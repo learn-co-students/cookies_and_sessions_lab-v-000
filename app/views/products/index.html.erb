@@ -1,0 +1,6 @@
+<%= form_tag({controller: "products"}, action: "add", method: "post") do %>
+  <%= text_field_tag(:product) %>
+  <%=  submit_tag("add to cart")%>
+<% end %>
+
+<p>Cart Items:<%= @cart %></p>
