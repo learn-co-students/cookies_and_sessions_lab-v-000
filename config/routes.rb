@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :products
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +54,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  get '/products/index' => 'products#index'
+  post '/products/add_to_cart' => 'products#add'
+  root 'products#index'
 end
