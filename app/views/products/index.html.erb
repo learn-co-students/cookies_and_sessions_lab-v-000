@@ -1,0 +1,9 @@
+<% @products.each do |product| %>
+  <%= product.name %>
+<% end %>
+
+<%= form_for @product, url: "/", method: :post do |f| %>
+  <%= f.text_field :name, id: "product" %>
+  <%= f.submit "Add to cart",  id: "add to cart" %>
+
+<% end %> %>
