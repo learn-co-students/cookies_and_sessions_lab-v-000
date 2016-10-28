@@ -1,12 +1,15 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    @products = Product.all # session[:cart].map{|item_name| Product.create(name: item_name)}
     @product = Product.new
   end
 
   def add
     # raise params.inspect
     @product = Product.create(product_params)
+    cart = session[:cart] || []
+    cart << @product.id
+    session[:cart] = cart
     redirect_to "/"
   end
 

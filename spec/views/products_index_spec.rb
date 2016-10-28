@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe "products/index", :type => :view do
   it "shows everything in the cart" do
-    # binding.pry
     assign(:cart, ['apples', 'bananas', 'pears'])
     render
     expect(rendered).to include 'apples'
