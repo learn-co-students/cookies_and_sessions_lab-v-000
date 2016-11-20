@@ -1,0 +1,9 @@
+<h3>List of products in your cart</h3>
+<%=@products.join(", ") if @products%>
+
+
+
+<%= form_tag({controller:"products", action:"add"}, method:"post") do%>
+  Product: <%= text_field_tag "product" %>
+  <%= submit_tag "add to cart"%>
+<% end %>
