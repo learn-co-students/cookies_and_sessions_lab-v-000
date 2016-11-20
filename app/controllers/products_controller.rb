@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   def index
     # cart
     # binding.pry
-    @products = cart #session[:cart] ||= []
+    @cart = cart #session[:cart] ||= []
 
   end
 
@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
     # @products << product_params
 
     cart << params[:product]
-    @products = cart
+    @cart = cart
     render :index
     # binding.pry
   end
