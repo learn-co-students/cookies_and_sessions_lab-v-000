@@ -1,0 +1,17 @@
+<h1>Products#index</h1>
+
+
+<ul>
+<% @products.each do |product| %>
+<li> <%= product.product %> </li>
+  <% end %>
+</ul>
+
+
+
+<%= form_for(@product) do |f| %> 
+<%= f.label :product %>
+<%= f.text_field :product %> <br>
+
+<%= f.submit %>
+<% end %> 
