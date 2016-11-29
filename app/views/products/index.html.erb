@@ -1,0 +1,17 @@
+<h1>Your cart contains:</h1>
+<ul>
+	<% if @cart %>
+		<% @cart.each do |item| %>
+			<li><%= item %></li>
+		<% end %>
+	<% end %>
+</ul>
+
+<%= form_for :product, url: '/products/add_to_cart', method: 'post' do |f| %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name, id: "product" %>
+
+	<%= f.submit "add to cart" %>
+
+<% end %>
