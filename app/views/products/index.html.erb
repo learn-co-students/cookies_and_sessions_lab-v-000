@@ -1,0 +1,7 @@
+<h1>Your Shopping Cart:</h1>
+
+<%= render partial: 'product', collection: @cart, as: :product %>
+
+<h4>Add an item to your cart:<h4>
+
+<%= render 'form' %>
