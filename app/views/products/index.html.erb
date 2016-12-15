@@ -1,0 +1,17 @@
+<h1>Welcome</h1>
+
+
+<form action="/products/add" method="post">
+	<input type="text" name="product">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<input type="submit" value="add to cart">
+</form>
+
+<h2>In your cart:</h2>
+<% unless @cart.empty? %>
+	<ol>
+		<% @cart.each do |item| %>
+			<li><%= item %></li>
+		<% end %>
+	</ol>
+<% end %>
