@@ -136,7 +136,8 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    spring (1.5.0)
+    spring (2.0.0)
+      activesupport (>= 4.2)
     sprockets (3.5.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -183,4 +184,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.4
+   1.13.7
