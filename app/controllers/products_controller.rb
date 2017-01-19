@@ -1,11 +1,5 @@
 class ProductsController < ApplicationController
 
-  helper_method :current_cart
-
-  def current_cart
-    session[:cart] ||= []
-  end
-
   def home
   end
 
@@ -15,7 +9,7 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = current_cart
+    @cart = current_cart
   end
 
 end
