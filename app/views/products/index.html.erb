@@ -1,0 +1,10 @@
+# Form with an input box to add an item.
+# Standard loop to display items in cart
+
+<%= @cart.join ', ' %>
+	
+<%= form_tag ({controller: 'products', action: 'add', method: 'post'}) do %>c
+
+	<input name=product>
+	<input type=submit value='add to cart'>
+<% end %>
