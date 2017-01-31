@@ -3,8 +3,7 @@
 <%= form_tag(add_path) %>
 <%= text_field_tag 'product' %>
 <%= submit_tag "add to cart" %>
-<% if @products %>
-  <% @products.each do |product| %>
+
+  <% @cart.each do |product| %>
     <%=product %>
   <%end%>
-<%end%>

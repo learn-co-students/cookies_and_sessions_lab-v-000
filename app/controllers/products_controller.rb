@@ -1,10 +1,13 @@
 class ProductsController < ApplicationController
   def index
-    @products = cart
+    @cart = cart
   end
 
   def add
+
     cart << params[:product]
-    redirect_to products_index_path
+    @cart = cart
+    render :index
+    #redirect_to products_index_path
   end
 end
