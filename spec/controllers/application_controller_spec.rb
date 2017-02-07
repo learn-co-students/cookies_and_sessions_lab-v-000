@@ -8,7 +8,7 @@ RSpec.describe ApplicationController do
 
     it "creates a cart in the session if one doesn't exist" do
       expect(@request.session[:cart]).to be nil
-      expect(controller.cart).to eq session[:cart]
+      expect(controller.cart).to eq [] #shouldn't controller.cart not be nil if it is expected to create a cart?
     end
 
     it "returns the existing cart if one already exists" do
