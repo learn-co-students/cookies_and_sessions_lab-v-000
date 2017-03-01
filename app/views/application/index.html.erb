@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    Products currently in cart:
+    <br>
+    <% @cart.each do |p| %>
+      <%= p %>
+    <% end %>
+    <form class="" action="add_to_cart" method="post">
+      <input type="text" name="product" value="">
+      <input type="submit" name="add to cart" value="add to cart">
+    </form>
+  </body>
+</html>
