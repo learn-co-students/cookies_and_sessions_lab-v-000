@@ -1,0 +1,18 @@
+<h1>Cart</h1>
+
+
+<form method="post" action="products/add">
+    <input type="text" name="item_name" id="product">
+    <input type="submit" value="add to cart">
+</form>
+
+<ul>
+    <% if @cart.nil? %>
+    <%= "Cart empty" %>
+    <% else %>
+    <% @cart.each do |item| %>
+    <li><%= item %></li>
+    <% end %>
+    <% end %>
+</ul>
+
