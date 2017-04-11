@@ -1,0 +1,8 @@
+<h1>Products#index</h1>
+Cart: <%= @cart %>
+
+<%= form_tag products_add_path do %>
+  <label for="product">Product</label>
+  <input type="text" name="product"/>
+  <%= submit_tag 'add to cart' %>
+<% end %>
