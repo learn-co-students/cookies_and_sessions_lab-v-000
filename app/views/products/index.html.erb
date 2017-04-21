@@ -1,0 +1,11 @@
+<!-- need to iterate over cart to show items -->
+
+<% @cart.each do |products| %>
+<%= products %>
+<% end %>
+
+<%= form_tag product_add_path do %>
+
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %>
