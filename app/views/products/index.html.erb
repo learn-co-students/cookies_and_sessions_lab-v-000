@@ -1,0 +1,5 @@
+<%= @cart %>
+
+<%= form_tag products_path, method: :post %>
+  <%= text_field_tag 'name', 'nil', id: 'product' %>
+  <%= submit_tag  'add to cart' %>
