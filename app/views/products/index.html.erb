@@ -1,0 +1,8 @@
+<form method="post" action="/add">
+  <input type="text" name="product">
+  <input type="submit" value="add to cart">
+</form>
+
+<% @cart.each do |product| %>
+  <p><%=product%></p>
+<% end %>
