@@ -1,0 +1,9 @@
+<h1>Products#index</h1>
+<p>Find me in app/views/products/index.html.erb</p>
+
+<%= @cart.join(", ") %>
+
+<%= form_tag({controller: 'products', action: 'add', method: 'post'}) do %>
+  <input type="text" name="product" value="">
+  <input type="submit" name="" value="add to cart">
+<% end %>
