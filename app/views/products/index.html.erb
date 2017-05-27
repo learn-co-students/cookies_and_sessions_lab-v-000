@@ -1,0 +1,13 @@
+Cart contents:
+
+<% @cart.each do |item| %>
+  <%= item %>
+<% end %>
+
+Add new item:
+
+<%= form_tag('/add_to_cart') do %>
+  <%= label_tag(:product, "product") %>
+  <%= text_field_tag(:product) %>
+  <%= submit_tag("add to cart") %>
+<% end %>
