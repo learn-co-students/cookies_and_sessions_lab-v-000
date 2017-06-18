@@ -1,0 +1,10 @@
+<% if @cart.size > 0 %>
+  <%= @cart.each do |i| %>
+    <p>i</p>
+  <% end %>
+<% end %>
+
+<%= form_tag("/products", method: "post") do %>
+  <%= text_field_tag(:product) %>
+  <button type="submit">add to cart</button>
+<% end %>
