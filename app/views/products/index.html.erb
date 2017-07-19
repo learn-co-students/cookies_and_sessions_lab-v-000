@@ -1,0 +1,8 @@
+<% @cart.each do |item| %>
+  <label><%= item %></label><br>
+<% end %>
+
+<%= form_for products_path, url: { action: "add"}, method: :post do |f|%>
+  <%= text_field_tag "product" %>
+  <%= f.button "add to cart" %>
+<% end %>
