@@ -1,0 +1,8 @@
+<h1>Current Cart</h1>
+<% @cart.each do |product| %>
+  <li><%= product %></li>
+<% end %>
+<br>
+
+<h3>Add Product</h3>
+  <%= render 'form' %>
