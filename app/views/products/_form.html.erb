@@ -1,0 +1,5 @@
+<%= form_tag("products", {method: "post") do %>
+  <%= label_tag(:first_name, "First Name") %>
+  <%= text_field_tag(:'student[first_name]', params[:student], :id => "first_name") %>
+  <%= submit_tag("Submit Student", :name => :submit, :id => :submit) %>
+<% end %>
