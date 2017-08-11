@@ -1,6 +1,4 @@
 <h1>Cart</h1>
-<% session[:cart].each do |product| 
-<% end %
-<%=  %>
-
-h1
+<% @cart.each do |product| %>
+  <p><%= product %></p>
+<% end %>
