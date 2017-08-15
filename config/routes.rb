@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get '/', to: 'application#index'
+  get '/', to: 'products#index'
   post '/cart', to: 'products#cart'
 end

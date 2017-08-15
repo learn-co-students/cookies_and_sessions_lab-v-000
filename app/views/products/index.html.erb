@@ -1,3 +1,8 @@
+<form method="post" action="/cart">
+  <input type="text" name="product">
+  <button type="submit">add to cart</button>
+</form>
+
 <ul>
   <% @cart.each do |item| %>
   <li><%= item %></li>
