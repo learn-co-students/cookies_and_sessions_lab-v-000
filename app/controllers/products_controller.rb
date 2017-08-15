@@ -1,11 +1,8 @@
 class ProductsController < ApplicationController
 
   def index
-    if session[:cart]
-      @cart = session[:cart]
-    else
-      redirect_to '/'
-    end
+    session[:cart] ||= []
+    @cart = session[:cart]
   end
 
   def cart
