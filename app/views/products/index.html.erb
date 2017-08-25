@@ -1,0 +1,11 @@
+<h3>Current Products:</h3>
+  <% @cart.each do |item| %>
+    <%= item %>
+  <% end %>
+
+
+<h3>Add Item</h3>
+<form action="products/add" method="POST">
+  <input id="product" name="product" type="text" />
+  <input name="commit" type="submit" value="add to cart" />
+</form>
