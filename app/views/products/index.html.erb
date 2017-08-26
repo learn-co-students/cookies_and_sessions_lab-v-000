@@ -6,6 +6,6 @@
   <%= submit_tag("add to cart") %>
 <% end %>
 <h4>Cart</h4>
-<% cart.each do |item| %>
+<% (@cart || cart).each do |item| %>
   <p><%= item %></p>
 <% end %>
