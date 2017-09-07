@@ -1,0 +1,9 @@
+<h1>Products#index</h1>
+
+<%= form_tag('/products/add') do %>
+    <%= label_tag(:product, "Add Product") %>
+    <%= text_field_tag(:product)%>
+    <%= submit_tag("add to cart")%>
+<% end %>
+
+<%=  @cart.join(', ') %>
