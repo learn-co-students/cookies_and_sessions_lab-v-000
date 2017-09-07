@@ -1,0 +1,19 @@
+<!-- <form action="products/add" method="post">
+  Add Product:<br>
+  <input type="text" name="product" id="product"><br>
+  <input type="submit" value="Submit">
+</form> -->
+
+<%= form_tag ('/'), :method => :post do %>
+  <p>Add New Product:</p>
+  <%= text_field_tag 'product' %><br>
+  <%= submit_tag 'add to cart' %>
+<% end %>
+
+<h3>In Your Cart:</h3>
+
+<ul>
+  <% @cart.each do |item| %>
+    <li><%= item %></li>
+  <% end %>
+</ul>
