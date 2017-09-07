@@ -1,0 +1,14 @@
+<h1>welcome to our shopping cart</h1>
+<ul>
+<!-- a call to function ProductsController#cart is being made in the following line -->
+
+  <% cart.each do |i| %>
+    <li><%= i %></li>
+    <% end %>
+ </ul>
+
+ <%= form_tag ({controller: 'products',action: 'add',method: 'post'}) do  %>
+
+       <%= text_field_tag :product %>
+       <%= submit_tag "add to cart" %>
+   <%  end %>
