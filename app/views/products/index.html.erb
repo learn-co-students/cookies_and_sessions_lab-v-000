@@ -1,0 +1,9 @@
+<% if !@products.nil? %>
+<% byebug %>
+    <li>    
+        <%= @products.each do |product| %>
+            <ul><%= product.name %></ul>
+        <% end %>
+    </li>
+<% end %>
+
