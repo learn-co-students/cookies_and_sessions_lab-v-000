@@ -4,8 +4,7 @@ class ProductsController < ActionController::Base
   end
 
   def add
-    binding.pry
-    cart << params[:item]
+    cart << params[:product]
     render :index
   end
 
