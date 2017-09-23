@@ -1,0 +1,11 @@
+<% session[:cart].each do |product| %>
+  <p><%= product %></p>
+<% end %>
+<br>
+
+<h3>Add Product</h3>
+
+<%= form_tag("products", {method: "post"}) do %>
+  <%= text_field_tag(:product) %>
+  <%= submit_tag("add to cart") %>
+<% end %>
