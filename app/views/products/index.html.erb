@@ -1,0 +1,17 @@
+<h1>Home Page</h1>
+
+<% cart.each do |item| %>
+  <li><%= item %></li>
+<% end %>
+
+<%#= form_tag({controller: "load", action: "new"}, method: "post") do %>
+<%#= label_tag(:q, "Search for:") %>
+<%#= text_field_tag(:q) %>
+<%#= submit_tag("Search") %>
+<%# end %>
+
+<%= form_tag ( {congroller: 'products', action: 'add', method: 'post'}) do  %>
+  <%= label_tag 'product' %>
+  <%= text_field_tag(:product)  %>
+  <%= submit_tag 'add to cart' %>
+<% end %>
