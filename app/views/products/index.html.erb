@@ -1,0 +1,15 @@
+<h1>Shop for a Product</h1>
+
+Products:
+<ul>
+  <%= cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+</ul>
+
+Type in the Product you would like to Purchase:
+<%= form_tag("/", :method => "POST") do %>
+  <%= text_field_tag :product %>
+
+  <%= submit_tag "add to cart" %>
+<% end %>
