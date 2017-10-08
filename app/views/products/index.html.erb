@@ -9,7 +9,7 @@
 
 <div>
 <h1>Current products in your cart:</h1>
-<% session[:cart].each do |p| %>
+<% cart.each do |p| %>
   </li><%= p %></li>
 <% end %>
 </div>
