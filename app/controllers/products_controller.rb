@@ -1,13 +1,11 @@
-class ProductsController < ActionController::Base
+class ProductsController < ApplicationController
   def index
-    @cart = session[:cart] ||= []
-    @cart << params["product"]
-    session[:cart] = @cart
- #  raise session[:cart].inspect
+
   end
 
   def add
-
+    cart << params[:product]
+    render :index
   end
 
 end
