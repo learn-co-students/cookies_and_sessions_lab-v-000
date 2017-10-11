@@ -1,0 +1,12 @@
+<%= form_tag do %>
+
+  <%= label_tag(:product) %>
+  <%= text_field_tag(:product) %>
+
+  <%= button_tag('add to cart')%>
+
+<% end %>
+
+<% @cart.each do |item| %>
+<%= item %>
+<% end %>
