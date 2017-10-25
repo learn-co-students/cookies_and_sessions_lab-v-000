@@ -1,0 +1,15 @@
+<!-- <form action="/products" method="post">
+  <input type="text" name="product">
+  <input type="submit" value="Add Product">
+</form>
+ -->
+ <ul>
+ <% cart.each do |item| %>
+   <li><%= item %></li>
+ <% end %>
+ </ul>
+
+<%= form_for :product, :url => '/products' do |f| %>
+  Add a product: <%= f.text_field :product %><br />
+  <%= f.submit %>
+<% end %>
