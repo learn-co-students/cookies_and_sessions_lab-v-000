@@ -9,7 +9,8 @@
  <% end %>
  </ul>
 
-<%= form_for :product, :url => '/products' do |f| %>
-  Add a product: <%= f.text_field :product %><br />
-  <%= f.submit %>
+<%= form_tag("/products", method: "post") do %>
+  <%= label_tag(:product, "Add a product:") %>
+  <%= text_field_tag(:product) %>
+  <%= submit_tag("add to cart") %>
 <% end %>
