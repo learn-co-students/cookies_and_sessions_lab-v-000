@@ -1,5 +1,7 @@
 <ul>
-  <%= cart.inspect %>
+  <%= cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
 </ul>
 
 <%= form_tag 'products/add', method: :post do %>
