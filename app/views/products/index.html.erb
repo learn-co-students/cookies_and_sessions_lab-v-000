@@ -1,0 +1,16 @@
+<%= form_tag("/products") do %>
+  <%= label_tag("Product Name") %>
+  <%= text_field_tag('product') %>
+  <p></p>
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+<p></p>
+
+<% if cart %>
+  <% cart.each do |c| %>
+    <%= c %>
+  <% end %>
+<% else %>
+  Sorry, no products submitted.
+<% end %>
