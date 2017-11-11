@@ -1,15 +1,15 @@
 <h1>You're at the products index page</h1>
 
-    <% if session[:cart] %>
+    <% if !cart.empty?%>
       <ul>
-        <% session[:cart].each do |item| %>
+        <% cart.each do |item| %>
           <li><%= item %></li>
         <% end %>
       </ul>
     <% end %>
-<form method="post" action="/products/add">
-  <label for="product"> Product Name:</label>
-  <input type="text" id="product" name="product">
 
-  <input type="submit" value="add to cart">
-</form>
+<%= form_tag('/products/add') do %>
+  <%= label_tag(:product, "Product Name:") %>
+  <%= text_field_tag(:product) %>
+  <%= submit_tag("add to cart") %>
+<% end %>
