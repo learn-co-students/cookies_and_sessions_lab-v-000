@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe ApplicationController do
   describe 'cart' do
     it "returns the user's shopping cart, an initially empty array" do
+      # byebug#http://edgeguides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-byebug-gem
       expect(controller.cart).to eq []
     end
 
