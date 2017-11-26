@@ -1,0 +1,15 @@
+<ul>
+  <% if !cart.nil?%>
+    <%= cart.each do |product| %>
+      <li><%= product %></li>
+    <% end %>
+  <% else %>
+      <h3>Empty cart</h3>
+  <% end %>
+</ul>
+
+<%= form_tag('/', method: :post) do%>
+  <label for="product">Product</label>
+  <input id="product" name="product" type="text" />
+  <button name="button" type="submit">add to cart</button>
+  <% end %>
