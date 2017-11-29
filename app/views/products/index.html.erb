@@ -1,0 +1,15 @@
+<h1> Your current cart: </h1>
+<ul>
+  <% cart.each do |c| %>
+    <li> <%= c %> </li><br>
+  <% end %>
+</ul>
+
+<h3> Add another item to your cart: </h3>
+<br>
+<form action="/add" method="POST">
+  <label>Item name:</label><br>
+  <input type="text" name="product"><br>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="add to cart">
+</form>
