@@ -1,0 +1,8 @@
+<h1>Cart:</h1>
+
+<ul>
+    <% #binding.pry %>
+    <% session[:cart].each do |item|%>
+        <li><%= item %></li>
+    <% end %>
+</ul>
