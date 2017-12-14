@@ -1,0 +1,8 @@
+<p>Products in cart: <%= cart.join(", ") %></p>
+
+<h1>Add To Cart</h1>
+<%= form_tag('/') do%>
+  <%= label_tag 'product' %>
+  <%= text_field_tag 'product'%>
+  <%= submit_tag 'add to cart'%>
+<%end%>
