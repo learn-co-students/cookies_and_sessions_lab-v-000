@@ -1,15 +1,15 @@
 <h1>Store Front</h1>
 
-<form method="POST" action="/products/add_to_cart"/>
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
-  <input type="text" name="product"/>
-  <input type="submit" id="add_to_cart" value="add to cart"/>
-</form>
+<%= form_tag(controller: 'products', action: 'add', method: 'post') do %>
+  <%= label_tag :product %>
+  <%= text_field_tag :product %>
+  <%= submit_tag "add to cart" %>
+<% end %>
 
 
 <h1>Your Cart</h1>
 <ul>
-<% @cart.each do |product| %>
+<% cart.each do |product| %>
   <li><%= product %></li>
 <% end %>
 </ul>
