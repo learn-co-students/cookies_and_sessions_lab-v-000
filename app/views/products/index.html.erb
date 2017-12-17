@@ -1,0 +1,15 @@
+Hey hey - here is the index!
+
+<%= form_tag('/products', method: :post) do %>
+<%= text_field_tag 'product' %>
+<%= submit_tag 'add to cart'%>
+<% end %>
+
+Here is what is in your cart right now: <br/>
+<% if session[:cart] != [] %>
+    <% session[:cart].each do |item| %>
+    <%= item %>
+    <% end %>
+<% else %> 
+    <%= "Your cart is currently empty" %>
+<% end %>
