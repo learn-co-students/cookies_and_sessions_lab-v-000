@@ -1,0 +1,15 @@
+<h1> Enter a new item below</h1>
+
+<form method='post' action='/add'>
+New Item: <input type='text' id="product" name="product"  /><br /><br />
+<input type='submit' name='add to cart' value='add to cart'  /><br />
+</form>
+
+<ul>
+  <% binding.pry %>
+  <% session[:cart].each do |item| %>
+      <li  >
+        <%= item.to_s %>
+      </li>
+  <% end %>
+</ul>
