@@ -42,4 +42,8 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
+  gem 'web-console'
+  # gem 'awesome_print', :require => 'ap'
+  gem 'pry'
+ 
 end
