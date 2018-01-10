@@ -10,6 +10,6 @@ Add a product:
 
 Here is what is in the cart:
 
-<%= @cart_items.each do |item| %>
+<% session[:cart].each do |item| %>
   <p><%= item %></p>
 <% end %>
