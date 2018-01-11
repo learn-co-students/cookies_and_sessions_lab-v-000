@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+#Create the routes for the application, we only need two routes, one to display the
+#Products#index (the root route) and one to post the products to add them to the cart.
+
+  root 'products#index'
+  post '/' => 'products#add'
+  #products_index POST /products/index(.:format) products#index
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
