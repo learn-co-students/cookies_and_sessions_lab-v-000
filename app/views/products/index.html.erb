@@ -1,0 +1,5 @@
+<%= @cart.join(', ') if !@cart.nil? %>
+<%= form_tag('/products') do %>
+  <%= text_field_tag 'product' %>
+  <%= submit_tag 'add to cart' %>
+<% end %>
