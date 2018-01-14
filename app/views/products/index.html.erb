@@ -1,0 +1,9 @@
+<% session[:cart].each do |product| %>
+  <%= product %>
+<% end %>
+
+<br>
+<%= form_tag '/add' do %>
+  <%= text_field_tag 'product' %>
+  <%= submit_tag "add to cart" %>
+<% end %>
