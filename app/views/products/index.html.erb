@@ -1,0 +1,10 @@
+<h1>Products#index</h1>
+<% if !@cart.nil? %>
+  Products <br>
+  <%= @cart.join(", ") %>
+<%end%>
+<form method='POST' action='products/add'>
+  <label>Product  Name</label>
+  <input type="text" name="product" >
+  <button type='submit'>add to cart</button>
+</form>
