@@ -1,0 +1,13 @@
+<h1>Your Shopping Cart:</h1>
+
+<ul>
+  <% session[:cart].each do |item|%>
+  <li><%= item %></li>
+  <% end %>
+</ul>
+
+<form method="post" action="products/add">
+  <label>Enter the food item you want to add to your cart:</label>
+  <input type="text" name="product">
+  <input type="submit" value="add to cart">
+</form>
