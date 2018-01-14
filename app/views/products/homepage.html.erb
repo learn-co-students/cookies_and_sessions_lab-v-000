@@ -1,0 +1,19 @@
+
+
+
+
+The page should have, at a minimum: a text box where the user can enter the name of a product, a submit button that adds it to their cart, and a display of what's in the cart.
+
+</h2> In Your Cart: </h2>
+  
+<%= cart %>
+
+
+</h2> Add an Item: </h2>
+
+<%= form_tag (controller: 'products', action: 'add', method: 'post') do %>
+
+  <%= input name="product" id='product' type="text" %>
+
+  <% input type="submit" value ="add to cart" %>
+<% end %>
