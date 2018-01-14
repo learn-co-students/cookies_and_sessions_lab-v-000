@@ -1,0 +1,15 @@
+<h3>Enter the item you would like to add to the cart!</h3>
+
+<h3>Current Items:</h3>
+<ul>
+  <% if !cart.empty? %>
+    <% cart.each do |item| %>
+      <%= content_tag :li, item %>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= form_tag products_add_path do %>
+  <%= text_field_tag :product %>
+  <%= submit_tag "add to cart" %>
+<% end %>
