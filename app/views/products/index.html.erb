@@ -1,0 +1,12 @@
+<% if @cart %>
+ <%= "Your cart currently have #{@cart.size}" "item".pluralize("#{@cart.size}") %> <br/><br/>
+  <% @cart.each do |product| %>
+    <%= product %>
+   <% end %>
+<% end %><br/><br/>
+
+ <%= form_tag '/products/add' do %>
+   <%= label_tag "Item:     " %>
+   <%= text_field_tag 'item' %>
+   <%= submit_tag 'add to cart' %>
+ <% end %>
