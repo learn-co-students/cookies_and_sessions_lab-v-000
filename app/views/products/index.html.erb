@@ -1,0 +1,12 @@
+<% if !@cart.nil? %>
+  <ul>
+    <% @cart.each do |p| %>
+      <li><%= p %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_tag add_path do %>
+  <%= text_field_tag :product %>
+  <%= submit_tag "add to cart" %>
+<% end %>
