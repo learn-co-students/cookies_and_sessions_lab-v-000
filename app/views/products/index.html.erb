@@ -1,0 +1,17 @@
+<% if !@cart.empty? %>
+  <h2>Items in cart:</h2>
+  <ul>
+    <% @cart.each do |cart| %>
+      <li>
+        <%= cart %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h2>Add Another Item</h2>
+<%= form_tag add_path do %>
+  <label for="product">Name: </label>
+  <%= text_field_tag :product %>
+  <%= submit_tag 'add to cart' %>
+<% end %>
