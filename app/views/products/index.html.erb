@@ -1,0 +1,24 @@
+<ul>
+  <% if @cart != nil %>
+    <% @cart.each do |item| %>
+      <li><%= item %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= form_tag "/products/add" do %>
+  Product: <%= text_field_tag "product" %>
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+
+
+<!-- <%= @cart.join ', ' %>
+
+<%= form_tag ({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
+
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %> -->
