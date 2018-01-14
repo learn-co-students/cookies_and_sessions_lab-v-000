@@ -1,0 +1,10 @@
+<h1>Products</h1>
+
+<%= @cart.join ', ' %>
+
+<%= form_tag ({controller: 'products', method: 'post', action: 'add'}) do %>
+
+  <input type="text" name="product"><br>
+  <input type="submit" value="add to cart" name="submit">
+  
+<% end %>
