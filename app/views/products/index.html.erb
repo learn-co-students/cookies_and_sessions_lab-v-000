@@ -1,0 +1,12 @@
+Hello from indec page
+
+
+ <%= form_tag('/add') do%> 
+
+ <input name="product" id="product" type="text"/>
+   <div><%= submit_tag 'add to cart' %></div>
+
+ <% end %>
+
+
+ <%= @cart %>
