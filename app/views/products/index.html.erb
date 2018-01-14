@@ -1,0 +1,13 @@
+<h1>Welcome to super simple shopping cart!</h1>
+
+<%= form_tag products_add_path, method: 'post' do %>
+  <%= label_tag "Product Name" %>
+  <%= text_field_tag "product" %>
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+<ul>
+  <% cart.each do |product| %>
+  <li><%= product %></li>
+  <% end %>
+</ul>
