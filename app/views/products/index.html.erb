@@ -1,0 +1,10 @@
+<h3>You currently have these items in your cart:</h3>
+<% if !cart.nil? %>
+	<% cart.each do |p| %>
+		<p><%= p %></p>
+	<% end  %>
+<% end  %>
+<%= form_for :product, url: "products" do |form| %>
+  <%= form.text_field :product, 'name'=>"product" %>
+  <%= form.submit "add to cart" %>
+<% end  %>
