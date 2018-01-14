@@ -1,0 +1,10 @@
+<%= form_tag '/index' do%>
+<%=label_tag 'product'%>
+<%= text_field_tag 'product', "Enter an item"%>
+<%= button_tag "add to cart"%>
+<%end%>
+
+
+<%=@cart.each do |item|%>
+	<h3><%=item%></h3>
+<%end%>
