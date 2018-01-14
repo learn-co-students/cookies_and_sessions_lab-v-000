@@ -1,0 +1,10 @@
+<h1>Your Cart</h1>
+<!-- conditionally displays @cart items -->
+<h3>Currently includes:</h3>
+<%= @cart.join(", ") %>
+
+<h3>Add an item: </h3>
+<%= form_tag({:controller => "products", :action => "add", :method => "post"}) do %>
+  <input type="text" name="product" >
+  <input type="submit" value="add to cart" >
+<% end %>
