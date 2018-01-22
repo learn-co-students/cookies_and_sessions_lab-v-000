@@ -1,0 +1,15 @@
+<h2>Shop for Products | View Your Cart</h2>
+
+<p>Your shopping cart currently contains the following products:</p>
+
+<ul>
+  <% cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+</ul>
+
+<%= form_tag '/' do %>
+  <%= label_tag :product, "Enter the name of a product to add to your shopping cart:" %>
+  <%= text_field_tag :product %><br>
+  <%= submit_tag "add to cart" %>
+<% end %>
