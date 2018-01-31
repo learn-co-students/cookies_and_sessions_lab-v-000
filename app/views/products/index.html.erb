@@ -1,0 +1,9 @@
+<%= form_tag products_add_to_cart_path do %>
+<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+Product<input type="text" name="product">
+<input type="submit" value="Add to cart">
+<% end %>
+
+<% @cart.each do |product|%>
+<%= product %>
+<% end %>
