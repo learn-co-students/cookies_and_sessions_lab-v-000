@@ -1,0 +1,9 @@
+<% @cart.each do |item|%>
+  <%= item %><br>
+<% end %>
+
+
+<form method="post" action="/products/add">
+  <label>product :<input type="text" name="item"></label>
+  <input type="submit" value="Add">
+</form>
