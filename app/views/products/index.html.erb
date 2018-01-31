@@ -1,0 +1,12 @@
+<%=@cart.join(" ,")%>
+
+<%= form_tag 'products/add', method: :post, class: "navbar-form navbar-left search-form" do %>
+  <%= text_field_tag(
+      :product,
+      params[:product],
+      placeholder: "Input Item",
+      class: "form-control",
+      id: "product"
+  ) %>
+  <button type="submit" name="add to cart">add to cart</button>
+<% end %>
