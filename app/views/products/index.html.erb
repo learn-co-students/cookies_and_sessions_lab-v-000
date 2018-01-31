@@ -1,0 +1,20 @@
+<h1>Homepage - Cart</h1>
+
+<h3>Your cart</h3>
+<ul>
+  <% if @cart.nil? %>
+  <p>Your cart is empty</p>
+  <% else %>
+    <% @cart.each do |item| %>
+  <li>
+    <%= item %>
+  </li>
+  <% end %>
+  <% end %>
+</ul>
+<h3>Add a new item</h3>
+<%= form_tag('/add') do %>
+  <div>
+    <%= text_field_tag 'item' %>
+    <%= submit_tag 'Add Item to Cart' %></div>
+<% end -%>
