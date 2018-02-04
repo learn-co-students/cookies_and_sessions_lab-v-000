@@ -1,0 +1,22 @@
+<h2>Your Cart</h2>
+
+<% if session[:cart].nil? %>
+  <p class="text-center">
+    There are no products in your shopping cart.  Please add some products to your cart.
+  </p>
+<% else %>
+<ol>
+  <% session[:cart].each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+</ol>
+<% end %>
+
+<h2>Add Product</h2>
+
+<%= form_tag ('/') do %>
+  <input name = product>
+  <input type = submit value = 'add to cart'>
+<% end %>
+
+  <!-- <%= link_to "add to cart", add_to_cart_path, :method => :post %> -->
