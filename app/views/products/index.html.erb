@@ -6,7 +6,8 @@
   <% end %>
 </ol>
 
-<%= form_tag("/products", action: "/products/add", method: "post") do %>
+<!-- <%= form_tag("/products", action: "/products/add", method: "post") do %>
   <%= text_field_tag(:product)  %>
   <%= submit_tag("add to cart") %>
-<% end %>
+<% end %> -->
+<%= button_to "Add to Cart", action: "/products/add" %>
