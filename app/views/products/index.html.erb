@@ -1,0 +1,15 @@
+<h1>Internet Superstore</h1>
+
+<h2>Your Cart:</h2>
+<ul>
+  <% cart.each do |item| %>
+    <li><%= item %></li>
+  <% end %>
+</ul>
+
+<p>Enter a product name to save to your virtual cart:</p>
+
+<%= form_tag("/products", action: "/products/add", method: "post") do %>
+  <%= text_field_tag(:product)  %>
+  <%= submit_tag("add to cart") %>
+<% end %>
