@@ -4,10 +4,11 @@
   <%= button_tag("add to cart") %>
 <% end %>
 
-<% if session[:cart] %>
 
-  <% session[:cart].each do |item| %>
+<% if cart %>
+  <ul>
+  <% cart.each do |item| %>
     <li><%= item %></li>
   <% end %>
-
+  </ul>
 <% end %>
