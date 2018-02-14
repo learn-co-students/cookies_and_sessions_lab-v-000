@@ -6,11 +6,12 @@ class ApplicationController < ActionController::Base
   helper_method :cart
 
   def cart
-    if session[:cart]
-      session[:cart]
-    else
-      session[:cart] = []
-    end
+    # if session[:cart]
+    #   session[:cart]
+    # else
+    #   session[:cart] = []
+    # end
+    session[:cart] ||= []
   end
 
 
