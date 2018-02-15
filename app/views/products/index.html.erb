@@ -1,0 +1,11 @@
+<h1>Products</h1>
+<%= form_tag products_add_path, method: :post do %>
+  <input type="text" name="product" placeholder="Product">
+
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+
+<% cart.each do |product| %>
+  <p><%= product %></p>
+<% end %>
