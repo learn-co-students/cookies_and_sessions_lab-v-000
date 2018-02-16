@@ -1,0 +1,11 @@
+<h1>Welcome to Shpping Cart</h1>
+<h3>Please add an item:</h3>
+<%= form_tag '/add' %>
+<div><%= text_field_tag 'product' %></div>
+<div><%= submit_tag 'add to cart' %></div>
+<h3>Your items:</h3>
+<% if !session[:cart].empty? %>
+  <% session[:cart].each do |product| %>
+    <%= product %>
+  <% end %>
+<% end %>
