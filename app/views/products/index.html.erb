@@ -1,0 +1,15 @@
+<h1> HOME PAGE </h1>
+
+<%= form_tag(products_add_path, method: :post) do %>
+  Product Name: <br>
+  <input type="text" name="product">
+  <button type="submit" value="add to cart"></button>
+<% end %>
+
+Cart: <br>
+
+<ul>
+  <%= cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+</ul>
