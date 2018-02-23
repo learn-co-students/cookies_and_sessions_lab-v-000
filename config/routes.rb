@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  get 'products/index'
+
+  get 'products/add'
+  resources :products, :only => [:index, :add]
+
+  root to: 'products#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  post '/products/add', to: 'products#add'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
