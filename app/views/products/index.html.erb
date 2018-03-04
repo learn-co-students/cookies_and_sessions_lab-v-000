@@ -5,16 +5,11 @@
 </ul>
 
 <%= form_tag({controller: 'products', action: 'add', method: 'post'}) do %>
-	<%= label_tag("product") %>
-	<%= text_field_tag :placeholder => "Enter your product here" %>
-	<%= submit_tag %>
+	
+	<%= text_field_tag "product" %>
+	<%= submit_tag("add to cart")%>
 <% end %>
 
 
-
-what's the html: 
-<input name="product">
-<input type="submit" value="Add to the cart">
-Need screenshare 
 
 

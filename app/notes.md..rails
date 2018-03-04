@@ -1,1 +1,8 @@
 ({controller: 'products', action: 'add', method: 'post'})
+
+
+
+what's the html: 
+<input name="product" value = "product">
+<input type="submit" value="Add to the cart">
+Need screenshare 
