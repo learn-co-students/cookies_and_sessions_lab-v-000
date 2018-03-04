@@ -1,0 +1,20 @@
+ <ul>
+ <%= cart.each do |product| %>
+ <li> <%= product %> </li>
+ <% end %>
+</ul>
+
+<%= form_tag({controller: 'products', action: 'add', method: 'post'}) do %>
+	<%= label_tag("product") %>
+	<%= text_field_tag :placeholder => "Enter your product here" %>
+	<%= submit_tag %>
+<% end %>
+
+
+
+what's the html: 
+<input name="product">
+<input type="submit" value="Add to the cart">
+Need screenshare 
+
+
