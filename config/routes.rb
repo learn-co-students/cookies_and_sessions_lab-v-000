@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  resources :products, only: [:index, :add]
+
+  #only 2 routes are required
+  #a root to display the products#index action called the roote
+  root 'products#index'
+  #and a route to post products to them to the cart
+  post '/' => 'products#add'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
