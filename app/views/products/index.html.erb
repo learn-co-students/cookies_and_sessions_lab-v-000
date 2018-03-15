@@ -1,0 +1,18 @@
+<ul>
+
+  <%#for each item in the cart, setup a list%>
+  <% if !cart.empty?%>
+        <%= cart.each do |product| %>
+          <li><%= product %></li>
+        <% end %>
+  <% end %>
+</ul>
+
+<%#setup a form with form_tag, that will interaction with the products controller, to the action method, via a post reuest%>
+<%= form_tag ({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
+    <%#give the form a product input and a submit button%>
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %>
