@@ -1,0 +1,27 @@
+class ProductsController < ApplicationController
+  def index
+  end
+
+  def add
+    cart << params[:product]
+    render :index
+  end
+end
+
+
+
+views
+products/index.html.erb
+<ul>
+  <%= cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+</ul>
+
+<%= form_tag ({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
+
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %>
