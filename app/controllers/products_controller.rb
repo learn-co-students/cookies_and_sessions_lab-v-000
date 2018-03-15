@@ -6,6 +6,6 @@ class ProductsController < ApplicationController
       @cart = Product.cart
   end
   def add
-
+      
   end
 end
