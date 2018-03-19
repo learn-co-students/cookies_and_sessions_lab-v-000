@@ -1,0 +1,14 @@
+<h1>Shop</h1>
+
+<%= form_tag add_path, method: 'post' do %>
+  <%= text_field_tag :product %><br>
+  <%= submit_tag 'add to cart' %>
+<% end %>
+
+<% if session[:cart] %>
+  <% session[:cart].each do |item| %>
+    <h2><%= item %></h2>
+  <% end %>
+<% else %>
+  <h2>There are no items in your cart</h2>
+<% end %>
