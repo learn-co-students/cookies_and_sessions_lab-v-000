@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  get '/products', to: 'products#index', as: 'index'
-  post '/products', to: 'products#add', as: 'add'
-
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
+  root 'products#index'
+  post '/', to: 'products#add'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
