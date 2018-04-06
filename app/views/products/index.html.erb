@@ -1,11 +1,19 @@
+<!-- iterate through the 'cart' (defined as a helper method in the application controller, and display each item in the cart) -->
 <ul>
 <%= cart.each do |item| %>
   <li><%= item %></li>
 <% end %>
 </ul>
 
+
+<!-- use form_tag.  you must define the controller (in this case, the products controller.  using the 'add' method (defined in products controller), and using the 'post' html verb.  you make an input tag with name "product", which adds it to params, as  well as another input tag which submits the data to the add method inside of the products controller.  'add to cart' is used as the value, to pass the capybara test) -->
+
+
 <%= form_tag ({controller: 'products', action: 'add', method: 'post'}) do %>
   <input name=product>
   <input type=submit value='add to cart'>
 <% end %>
+
+
+
 

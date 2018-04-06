@@ -5,12 +5,17 @@ Rails.application.routes.draw do
   
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+
+  #this sets the homepage(root) to the index method of the products controller
   root 'products#index'
   
+  #this allows the user to post from the homepage, using the add method of the products controller
+  post '/' => 'products#add'
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  post '/' => 'products#add'
+
+
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
