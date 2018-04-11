@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   #   resources :products
   
       root 'products#index'
-      post '/', to: 'products#add'
+      post '/product', to: 'products#add'
 
   # Example resource route with options:
   #   resources :products do
