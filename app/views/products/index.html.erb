@@ -1,0 +1,10 @@
+<h1>Cart</h1>
+<% @cart = session[:cart] unless @cart %>
+<ul><% @cart.each do |product| %>
+  <li><%= product %></li>
+<% end %></ul>
+
+<form action="/products" method="post">
+  <input type="text" name="product" id="product">
+  <input type="submit" value="add to cart">
+</form>
