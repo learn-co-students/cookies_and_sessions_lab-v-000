@@ -1,0 +1,17 @@
+
+
+<%= form_tag "/products" do %>
+  Product Name: <%= text_field_tag "product" %><br>
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+<h3>Your Cart:</h3>
+
+<ul>
+	<%if session[:cart]%>
+	<% session[:cart].each do |item| %>
+		<li><%= item %></li>
+	<% end %>
+	<%end%>
+</ul>
+
