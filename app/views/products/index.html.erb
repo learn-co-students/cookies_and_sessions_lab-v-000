@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Cart</h1>
+
+
+    <% cart.each do |product| %>
+      <li><%= product %></li>
+    <% end %>
+
+    <h1>Add</h1>
+
+    <%= form_tag '/products', method: :post do %>
+      <%= text_field_tag :product, nil, placeholder: "Add"  %>
+      <%= submit_tag "add to cart" %>
+    <% end %>
+
+  </body>
+</html>
