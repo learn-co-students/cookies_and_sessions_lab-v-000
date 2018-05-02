@@ -1,0 +1,10 @@
+<form action="products" method="POST">
+<p> Product <input type="TEXT" name="product" id="product"></p>
+<input type="submit" value="add to cart" id="add to cart">
+</form>
+
+<% if !cart.empty? %>
+  <% cart.each do |item| %>
+    <p><%= item %></p>
+  <% end %>
+<% end %>
