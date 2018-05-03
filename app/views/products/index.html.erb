@@ -1,6 +1,7 @@
 <h2>Current Order</h2>
     <ul>
         <%= @cart.each do |product| %>
+        <% binding.pry %>
             <li><%= product %></li>
         <% end %>
     </ul>
