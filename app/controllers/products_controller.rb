@@ -4,7 +4,11 @@ class ProductsController < ApplicationController
     @product
   end
 
-  def add
+  def new
+    
+  end
+
+  def create
     byebug
   end
 end
