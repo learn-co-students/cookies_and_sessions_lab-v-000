@@ -4,14 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def cart
-    if session[:cart]
-      @cart = session[:cart] 
-    else
+    if !session[:cart]
       session[:cart] = []
-      @cart = session[:cart] 
     end
-    @cart
-    
+    @cart = session[:cart]
+
     # this method should return an array of the items stored in the cart (utilizing the Rails session method).
   end
 end
