@@ -1,9 +1,10 @@
 class ProductsController < ApplicationController
 
   def index
-    @product 
+    @product
   end
 
   def add
+    byebug
   end
 end
