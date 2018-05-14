@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def cart
+    byebug
     if !session[:cart]
       session[:cart] = []
     end
@@ -11,4 +12,7 @@ class ApplicationController < ActionController::Base
 
     # this method should return an array of the items stored in the cart (utilizing the Rails session method).
   end
+
+  #the point of this lab seems to be to use the session to hold data and persist it from one html request cycle to another
+
 end
