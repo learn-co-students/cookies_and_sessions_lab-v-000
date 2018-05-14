@@ -1,0 +1,16 @@
+
+
+<form action="/products/add" method="POST">
+  <label>Product Name:</label>
+  <input type="text" name="product" id="product"><br>
+  <input type="submit" value="Submit" id="add to cart">
+</form>
+<!--
+<%= form_tag ({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
+    <%end%>
+  -->
+<%session[:cart].each do |product|%>
+  <%=product%>
+<%end%>
