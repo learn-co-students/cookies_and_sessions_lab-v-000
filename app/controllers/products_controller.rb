@@ -9,8 +9,9 @@ class ProductsController < ApplicationController
   end
 
   def create
-    byebug
     @product = params[:product]
+    cart << @product
+    byebug
     #need to add this item to the cart
     #need to send this to the view to show a list of products
     #need to display
