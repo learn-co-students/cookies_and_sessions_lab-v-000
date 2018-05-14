@@ -10,4 +10,10 @@ class ProductsController < ApplicationController
     cart(params[:product])
     redirect_to '/products'
   end
+
+  def add
+    cart(params[:product])
+    redirect_to '/products'
+  end
+  
 end
