@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
     cart(@product)
     #byebug
     #redirect_to index
+    #@cart = cart
     redirect_to '/products'
   end
 end
