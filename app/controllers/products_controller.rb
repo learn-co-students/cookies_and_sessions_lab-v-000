@@ -2,7 +2,6 @@ class ProductsController < ApplicationController
 
   def index
     #@product
-    byebug
   end
 
 
@@ -10,7 +9,7 @@ class ProductsController < ApplicationController
     @product = params[:product]
     #cart << @product
     #@cart = cart
-    session[:cart] << @product
+    cart(@product)
     redirect_to index
   end
 end
