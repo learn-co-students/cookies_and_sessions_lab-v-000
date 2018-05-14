@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
     #cart << @product
     #@cart = cart
     cart(@product)
+    byebug
     redirect_to index
   end
 end
