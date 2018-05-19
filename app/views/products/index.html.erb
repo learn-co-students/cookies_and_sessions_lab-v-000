@@ -1,0 +1,10 @@
+<%= form_tag(url_for(controller: :products, action: :add)) do %>
+	<%= text_area_tag(:product) %><br>
+	<%= submit_tag("add to cart") %>
+<% end %>
+
+<% cart.each do |product| %>
+	<ul>
+		<li><%= product %></li>
+	</ul>
+<% end %>
