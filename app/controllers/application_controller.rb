@@ -9,7 +9,4 @@ class ApplicationController < ActionController::Base
     session[:cart] = cart
   end
 
-  def add_to_cart
-
-  end
 end
