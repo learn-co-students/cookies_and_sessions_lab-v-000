@@ -1,0 +1,20 @@
+<!-- <form action="/products" method="POST">
+<p> Enter Item: <input type="text" name="item"></p>
+<input type="submit" id="Submit" value="Add Item to Cart">
+</form> -->
+
+<!-- add item to cart thru simple form  -->
+<%= form_tag add_path do %>
+  <%= text_field_tag :product %><br>
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+
+<!-- display cart items if any exist.  -->
+<% if cart %>
+<% cart.each do |item| %>
+<ul>
+  <li><%= item %></li>
+</ul>
+<%end%>
+<%end%>
