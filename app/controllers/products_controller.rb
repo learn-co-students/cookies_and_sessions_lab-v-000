@@ -1,12 +1,8 @@
 class ProductsController < ApplicationController
   helper_method :cart
 
-  def add
-      cart << params[:product]
-      redirect_to action: "index"
+  def index
+    cart << params[:product]
   end
-
-
-
 
 end
