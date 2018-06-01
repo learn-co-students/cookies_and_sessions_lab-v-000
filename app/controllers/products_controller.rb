@@ -2,7 +2,6 @@
 class ProductsController < ApplicationController
 
   def index
-    @cart = ['apples', 'bananas', 'pears']
   end
 
   def add
