@@ -1,0 +1,15 @@
+
+<h3>Add New Product</h3>
+<%= form_tag("/products/add") do %>
+  Product Name: <%= text_field_tag "product" %><br>
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+<h3>Current Products in Cart</h3>
+<!-- <p>Cart = <%= @cart %></p> -->
+<ul>
+  <% @cart = session[:cart] %>
+  <% @cart.each do |item| %>
+    <li><%= item %></li>
+  <% end %>
+</ul>
