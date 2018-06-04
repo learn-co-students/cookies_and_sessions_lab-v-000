@@ -1,0 +1,16 @@
+
+<!-- add item to cart thru simple form  -->
+<!-- when submitting a form to the same page, you can simply OMIT the ACTION or Path.  -->
+<%= form_tag do %>
+  <%= text_field_tag :product %><br>
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+
+<!-- display cart items if any exist.  -->
+
+<ul>
+<% cart.uniq.each do |item| %>
+  <li><%= item %></li>
+<%end%>
+</ul>
