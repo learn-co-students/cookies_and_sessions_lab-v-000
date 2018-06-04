@@ -8,6 +8,7 @@
 <h3>Current Products in Cart</h3>
 <!-- <p>Cart = <%= @cart %></p> -->
 <ul>
+  <!-- NOTE : Need to use the below line because of spec "shows everything in the cart" (doesn't go through index page) -->
   <% @cart = session[:cart] %>
   <% @cart.each do |item| %>
     <li><%= item %></li>
