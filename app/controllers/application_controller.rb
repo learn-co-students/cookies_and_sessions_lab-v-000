@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def cart
+    puts "Session Cart = #{session[:cart]}"
     session[:cart]
   end
 
