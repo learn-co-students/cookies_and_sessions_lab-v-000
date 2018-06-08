@@ -1,0 +1,12 @@
+<%# cart === session[:cart] %>
+<% cart.each do |item| %>
+  <%= item %>
+<% end %>
+
+
+
+
+<%= form_tag products_add_path do %>
+  <input type="text" name="product" id="product">
+  <input type="submit" name="commit" value="add to cart" >
+<% end %>
