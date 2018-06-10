@@ -1,0 +1,13 @@
+<h1> Products in Cart </h1>
+
+
+<% cart.each do |product| %>
+<li> <%= product %> </li>
+<% end %>
+
+<!-- #Rails Guide Action View Form Helpers Section 1.2 -->
+<!-- Other Note: form_tag - this works well for forms that are not directly connected with models. -->
+<%= form_tag ({controller: "products", action: "add", method: "post"}) do %>
+<input name="product">
+<input type="submit" value="add to cart">
+<% end %>
