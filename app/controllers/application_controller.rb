@@ -9,3 +9,6 @@ class ApplicationController < ActionController::Base
     session[:cart] ||= []
   end
 end
+
+#What? I need an explanation about this. Why need helper_method keyword if the method
+  #  is already available to all of the controllers as it is in ApplicationController?
