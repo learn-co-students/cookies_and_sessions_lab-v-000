@@ -2,8 +2,7 @@ require 'pry'
 
 class ProductsController < ApplicationController
   def index
-    cart = session[:cart] ||= []
-    binding.pry
+    cart = session[:cart]
   end
 
   def add
