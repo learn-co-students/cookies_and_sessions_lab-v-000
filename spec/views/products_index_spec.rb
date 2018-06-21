@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "products/index", :type => :view do
+
   before do
     controller.singleton_class.class_eval do
       protected
@@ -13,6 +14,7 @@ RSpec.describe "products/index", :type => :view do
 
   it "shows everything in the cart" do
     session[:cart] = ['apples', 'bananas', 'pears']
+    @cart = session[:cart] #=> needed access to @cart instance variable in view
     render
     expect(rendered).to include 'apples'
     expect(rendered).to include 'bananas'
