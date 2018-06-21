@@ -1,0 +1,16 @@
+<h1>Your Cart</h1>
+
+<% if !session[:cart].empty? %>
+  <% session[:cart].each do |item| %>
+    <p><%= item %></p>
+  <% end %>
+<% else %>
+  <p>Cart is empty.</p>
+<% end %>
+
+<%= form_tag ({controller: 'products', action: 'add', method: 'post'}) do  %>
+  <%= label_tag :product %>
+  <%= text_field_tag :product %><br>
+  
+  <%= submit_tag "add to cart" %>
+<% end %>
