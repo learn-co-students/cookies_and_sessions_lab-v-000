@@ -3,6 +3,8 @@
     <input type="submit" value="add to cart">
 </form>
 
-<% @cart.each do |product| %>
-  <%= product %>
+<% if @cart %>
+  <% @cart.each do |product| %>
+    <%= product %>
+  <% end %>
 <% end %>
