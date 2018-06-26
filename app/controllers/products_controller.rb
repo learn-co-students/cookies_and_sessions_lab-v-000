@@ -3,5 +3,9 @@ class ProductsController < ApplicationController
     end
 
     def add
+        cart << params[:product]
+        session[:cart] = cart
+
+        redirect_to action: 'index'
     end
 end
