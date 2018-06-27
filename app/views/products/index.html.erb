@@ -1,6 +1,11 @@
 <h1>Shopping Cart</h1>
-
-<%= @cart.join(" , ").gsub(", ","") %>
+<% if @cart %>
+	<ul>
+<% @cart.each do |product| %>
+	<li><%= product %></li>
+	<% end %>
+	</ul>
+<% end %>
 
 <%= form_tag ({controller: 'products',
     action: 'add',
