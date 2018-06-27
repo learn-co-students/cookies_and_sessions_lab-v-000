@@ -1,0 +1,10 @@
+<form action="/products/add" method="POST">
+    <input type="text" name="product">
+    <input type="submit" value="add to cart">
+</form>
+
+<% if session[:cart] %>
+  <% session[:cart].each do |product| %>
+    <%= product %>
+  <% end %>
+<% end %>
