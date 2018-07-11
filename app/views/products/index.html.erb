@@ -1,8 +1,10 @@
 <h2>Your Cart!</h2>
-<ol>
-<% @products.each do |product| %>
-  <li><%= product.name %></li>
+<% if @products %>
+  <ol>
+    <% @products.each do |product| %>
+      <li><%= product["name"] %></li>
+    <% end %>
+  </ol>
 <% end %>
-</ol>
 
 <%= render 'add' %>

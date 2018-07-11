@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  resources :products, only: [:index]
-  post :products, to: 'products#index'
-  get :add, to: 'products#index'
   root 'products#index'
+  get '/', to: 'products#index'
+  post '/', to: 'products#add'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
