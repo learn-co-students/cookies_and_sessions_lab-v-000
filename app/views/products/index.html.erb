@@ -1,0 +1,13 @@
+<h1>Home Page</h1>
+
+<%= form_tag('/') do %>
+  <%= label_tag :product %>
+  <%= text_field_tag :product %>
+  <%= submit_tag("add to cart") %>
+<% end %>
+
+<% if !session[:cart].empty? %>
+  <% session[:cart].each do |item| %>
+    <%= item %><br>
+  <% end %>
+<% end %>
