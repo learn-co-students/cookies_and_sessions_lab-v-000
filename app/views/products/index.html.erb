@@ -1,10 +1,13 @@
-<h2>Your Cart!</h2>
-<% if @products %>
-  <ol>
-    <% @products.each do |product| %>
-      <li><%= product["name"] %></li>
-    <% end %>
-  </ol>
-<% end %>
+<ul>
+  <%= cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+</ul>
 
-<%= render 'add' %>
+<%= form_tag ({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
+
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %>
