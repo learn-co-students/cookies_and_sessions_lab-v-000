@@ -1,0 +1,15 @@
+<header class="header">
+  <h3>Add a new item to the products list</h3>
+  <%= form_tag({:controller => "products", :action => "add", :method => "POST"}) do |f| %>
+    <label>Product:</label><br>
+    <input type="text" name="product"/>
+    <input type="submit" value="add to cart" />
+  <% end %>
+</header>
+
+<section class="main">
+  <ul>All Products</ul>
+  <%cart.each do |item|%>
+    <li><%= item %></li>
+  <% end %>
+</section>
