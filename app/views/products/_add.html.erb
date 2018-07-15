@@ -1,0 +1,4 @@
+<%= form_for 'product', url: { action: "add" } do |f| %>
+  Add Item: <%= f.text_field :product, id: 'product' %>
+  <%= f.submit "add to cart" %>
+<% end %>
