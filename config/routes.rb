@@ -7,11 +7,9 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   #resources :products
 
-  get 'authors/:id/posts', to: 'authors#posts_index'
+  post 'products/add', to: 'products#add'
 
-  get 'products/add', to: 'products#add'
-
-  get 'products/index', to: 'producs#index'
+  get 'products/index', to: 'products#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
