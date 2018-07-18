@@ -1,0 +1,12 @@
+<% if session[:cart] %>
+  <% session[:cart].each do |item| %>
+    <p><%= item %></p>
+  <% end %>
+<% end %>
+
+<form action="<%= products_add_path %>" method="POST">
+  <label>Shopping Cart:</label><br>
+  <input type="text" id="product" name="product"><br>
+
+  <input type="submit" value="add to cart">
+</form>
