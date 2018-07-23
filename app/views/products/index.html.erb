@@ -1,7 +1,8 @@
 <h1>Products#index</h1>
-<% if @products %>
+<% if cart %>
+  <% binding.pry %>
   <ul>
-    <% @products.each do |product| %>
+    <% cart.each do |product| %>
       <li><%= product %></li>
     <% end %>
   </ul>
