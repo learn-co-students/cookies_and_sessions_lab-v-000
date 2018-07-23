@@ -1,0 +1,6 @@
+<%= form_for @product do |f| %>
+    <%= f.feild_for :name %>
+    <%= f.hidden_field @cart.id %>
+    <%= f.submit, "add to cart" %>
+<% end %>
+add to cart 
