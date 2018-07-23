@@ -1,0 +1,13 @@
+<h1>Products#index</h1>
+<% if @products %>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= product %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_tag({controller: "products", action: "add", method: "post"}) do %>
+  Product Name: <%= text_field_tag "product" %>
+  <%= submit_tag "add to cart" %>
+<% end %>
