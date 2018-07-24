@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   # resources :products, only: [:index]
   root 'products#index'
-  post '/add' => 'products#add'
+  post '/' => 'products#add'
 
 
 
