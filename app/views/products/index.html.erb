@@ -1,0 +1,24 @@
+<h1>Add products: </h1>
+
+<%= form_tag ({:controller => 'products',
+    :action => 'add',
+    :method => 'post'}) do %>
+  <%= text_field_tag :product %>
+
+  <br><br>
+
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+
+<h1>Added to your cart: </h1>
+
+<ul>
+  <% if !cart.blank? %>
+    <%= cart.each_with_index do |product, i| %>
+        <li><%=i + 1%>. <%=product %></li>
+    <% end %>
+  <% else %>
+    <p> No products yet. </p>
+  <% end %>
+</ul>
