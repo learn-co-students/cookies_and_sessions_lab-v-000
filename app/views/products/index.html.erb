@@ -1,0 +1,16 @@
+<%= form_tag(action: "add", method: "post") do %>
+  <%= label_tag(:product, "Product:") %>
+  <%= text_field_tag(:product) %>
+  <%= submit_tag("add to cart") %>
+<% end %>
+
+<% if cart.empty? %>
+  <h2><em><font color="bblue">Your cart is currently empty.</font></em></h2>
+  <% else %>
+  <h2><em><font color="blue">You currently have <%= pluralize(cart.size, 'item') %> in your cart.</font></em></h2>
+    <ul>
+      <% cart.each do |product| %>
+        <li><font color="grey"><%= product %></font></li>
+      <% end %>
+    </ul>
+  <% end %>
