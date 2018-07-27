@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+#Products#index (the root route)
+#and one to post the products to add them to the cart.
+
+root 'products#index'
+post '/' => 'products#add'
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
