@@ -1,0 +1,8 @@
+<form name='product' action='/products' method='Post'>
+  <br>
+  <label for="product">Enter product to add to cart:</label>
+  <input type="text" id="product" name="product">
+  <button type='submit'>add to cart</button>
+</form>
+
+<%= session[:cart] %>
