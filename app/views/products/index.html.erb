@@ -6,8 +6,8 @@
 <%end%>
 
 
-<% if @cart%>
-  <% @cart.each do |item|%>
-    <%=item%><br>
+<ul>
+  <% cart.each do |item|%>
+    <li><%=item%></li>
   <%end%>
-<%end%>
+</ul>
