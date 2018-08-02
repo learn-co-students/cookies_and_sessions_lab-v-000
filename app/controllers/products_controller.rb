@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  
   def index
     @cart = cart
   end
@@ -8,5 +7,4 @@ class ProductsController < ApplicationController
     cart << params[:product]
     redirect_to root_path
   end
-  
 end
