@@ -1,3 +1,4 @@
+require 'pry'
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -6,4 +7,5 @@ class ApplicationController < ActionController::Base
   def cart
      session[:cart] ||= []
   end
+  helper_method :cart
 end
