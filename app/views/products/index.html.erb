@@ -1,0 +1,16 @@
+ <!-- minimum: a text box where the user can enter the name of a product,
+ a submit button that adds it to their cart, and a display of what's in the cart.
+  -->
+<h2>Products Index</h2>
+<h3>Current Cart Contents:</h3>
+<ul>
+<% cart.each do |product| %>
+  <li><%= product %></li>
+<% end %>
+</ul>
+
+<%= form_tag("/") do %>
+  <%= text_field_tag :product %>
+
+  <%= submit_tag "add to cart" %>
+<% end %>
