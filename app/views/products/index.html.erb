@@ -1,0 +1,13 @@
+<h1>Shopping Cart</h1>
+
+<%= cart.each do |item| %>
+  <%= item %>
+<% end %>
+
+<br />
+
+<form action="/" method="post">
+  <label for="product">Add an Item to Your Cart:</label>
+  <input type="text" name="product" placeholder="Add Item">
+  <input type="submit" value="add to cart">
+</form>
