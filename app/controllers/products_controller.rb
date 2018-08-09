@@ -6,7 +6,7 @@ class ProductsController < ActionController::Base
 
   def add_to_cart
     cart << params[:product]
-    redirect_to 'index'
+    render 'index'
   end
 
 
