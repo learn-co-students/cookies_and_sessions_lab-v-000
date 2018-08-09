@@ -1,0 +1,17 @@
+<h1> Products </h1>
+<ul>
+  <% if cart %>
+    <% cart.each do |item| %>
+    <%# iterating over cart method, not variable to get individual items from the array.
+    We are accessing the same helper method cart that we defined in the application controller through declaring the helper_method: cart.%>
+    <li><%= item %></li>
+  <% end %>
+<% end %>
+</ul>
+
+<h1> Add a Product </h1>
+<%= form_tag('/', method: :post) do %>
+<%= label_tag :product %>
+<%= text_field_tag :product %>
+<%= submit_tag "add to cart" %>
+<% end %>
