@@ -1,0 +1,9 @@
+<h1>Add Item To Cart</h1>
+<%= render 'form', locals: {cart: cart}%>
+
+<h3>Your Cart</h3>
+
+<% cart.each do |item| %>
+  <p><%= item %></p>
+
+<% end %>
