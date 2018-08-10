@@ -53,4 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  resources :products, only: [:index]
+  post 'products/add', to: 'products#add'
+
+  root 'products#index'
 end
