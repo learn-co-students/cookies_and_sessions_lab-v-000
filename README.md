@@ -21,3 +21,4 @@ We're going to use this to implement a shopping site. Here's how the site will w
 3. Create views using the feature tests as your guide. The page should have, at a minimum: a text box where the user can enter the name of a product, a submit button that adds it to their cart, and a display of what's in the cart.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/cookies_and_sessions_lab' title='Cookies and Sessions Lab'>Cookies and Sessions Lab</a> on Learn.co and start learning to code for free.</p>
+Will this show up?
