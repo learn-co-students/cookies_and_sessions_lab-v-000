@@ -1,0 +1,21 @@
+<h1>Products#index</h1>
+<p>Find me in app/views/products/index.html.erb</p>
+
+<%= form_tag("products/add", method: 'get')  do %>
+  <label>Product</label><br>
+  <%= label_tag(:product, "Enter item") %>
+  <%= text_field_tag :product %>
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+
+
+
+<h1>Your Cart</h1>
+<ul>
+  <% if !cart.empty?%>
+    <% cart.each do |item|%>
+    <li><%= item %></li>
+    <% end %>
+    <%end %>
+</ul>
