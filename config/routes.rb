@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get 'products/index'
 
-  get 'products/add'
+  # post 'products/add', to: 'products#add', as: '/add'
+  get 'products/add' => 'products#add'
 
   root 'products#index'
 
