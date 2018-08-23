@@ -1,0 +1,15 @@
+<h1>Products#index</h1>
+<p>Find me in app/views/products/index.html.erb</p>
+
+
+<%= form_for session[:cart] do |f| %>
+  <label>Product</label><br>
+  <%= f.text_field :product %>
+  <%= f.submit "Create" %>
+<% end %>
+
+<h1>Your Cart</h1>
+<ul>
+  <% cart.each do |item|%>
+  <% end %>
+</ul>
