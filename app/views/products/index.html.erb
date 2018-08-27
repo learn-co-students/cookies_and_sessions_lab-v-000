@@ -1,0 +1,12 @@
+<% if !cart.blank? %>
+  <% cart.each do |product| %>
+    <%= product %>
+  <% end %>
+<% end %>
+
+<%= form_tag root_path, method: "post" do %>
+  <label>Product name:</label><br>
+  <%= text_field_tag :product %><br>
+
+  <%= submit_tag "add to cart" %>
+<% end %>
