@@ -6,9 +6,8 @@ class ProductsController < ApplicationController
 
   def add
     # raise params[:product].inspect
-    product = params[:product]
-    cart.push(product)
-    redirect_to '/'
+    cart << params[:product]
+    render :index
   end
 
 end
