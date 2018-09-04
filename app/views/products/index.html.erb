@@ -1,0 +1,13 @@
+<h1>Cart</h1>
+
+<ul>
+    <%if @cart%>
+      <%@cart.each do |product| %>
+        <li><%=product%></li>
+      <%end%>
+    <%end%>
+</ul>
+<%= form_tag ("/products/add") do%>
+  <input type="text" name="product" id="product">
+  <input type="submit" name="add to cart" value="add to cart">
+<%end%>
