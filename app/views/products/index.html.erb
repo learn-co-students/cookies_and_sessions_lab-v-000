@@ -1,0 +1,16 @@
+<h1>Cart</h1>
+  
+
+<ol>
+  <% cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+</ol>
+
+
+<form action='/' method='POST'>
+    <label>Item Name: </label>
+    <input type="text" name="product">
+    
+    <input type="submit" value="add to cart">
+</form>
