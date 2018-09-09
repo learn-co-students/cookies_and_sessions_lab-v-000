@@ -1,9 +1,7 @@
 <h2>My Cart</h2>
 <ul>
-  <% if @cart %>
-
+  <% if @cart.present? %>
     <% @cart.each do |product| %>
-    <% binding.pry %>
       <li><%= product %></li>
     <% end %>
   <% end %>
