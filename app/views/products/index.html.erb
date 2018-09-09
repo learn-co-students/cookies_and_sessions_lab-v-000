@@ -1,0 +1,12 @@
+<h2>My Cart</h2>
+<ul>
+  <% if @cart %>
+
+    <% @cart.each do |product| %>
+    <% binding.pry %>
+      <li><%= product %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= render "products/add_product" %>
