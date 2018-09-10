@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
   def index
-    binding.pry
     cart
   end
 
