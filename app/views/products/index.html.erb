@@ -1,0 +1,12 @@
+<ul>
+<% if !!@products %>
+  <%@products.each do |product|%>
+  <li><%="#{product}"%></li>
+  <%end%>
+<%end%>
+</ul>
+<%= form_tag ("products/add") do %>
+  <label>Add to Cart:</label>
+  <%= text_field_tag :'product' %><br>
+<%= submit_tag "add to cart"%>
+<%end%>
