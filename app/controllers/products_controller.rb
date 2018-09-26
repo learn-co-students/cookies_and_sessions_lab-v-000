@@ -8,4 +8,8 @@ class ProductsController < ApplicationController
     render :index
   end
 
+  def destroy
+    cart.product.destroy
+  end
+
 end
