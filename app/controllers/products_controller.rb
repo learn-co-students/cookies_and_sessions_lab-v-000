@@ -1,10 +1,11 @@
 class ProductsController < ApplicationController
 
   def index
+    @cart = cart
   end
 
   def add
-    @item = params(:product)
-    current_cart << @item
+    cart << params[:product]
+    redirect_to "/"
   end
 end

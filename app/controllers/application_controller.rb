@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   def cart
     cart = session[:cart] || []
     session[:cart] = cart
+    cart
   end
 
   helpers do
