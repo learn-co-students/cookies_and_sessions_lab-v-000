@@ -1,7 +1,7 @@
 <h1>Your Cart</h1>
 
 <% cart.each do |item| %>
-  <%= item %>
+  <%= content_tag(:div, item) %>
 <% end %>
 
 <h3>Add an Item</h3>
