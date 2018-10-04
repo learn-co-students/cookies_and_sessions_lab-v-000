@@ -1,0 +1,5 @@
+<h1>Products#add</h1>
+<p>Your cart:</p>
+<% session[:cart].each do |item| %>
+  <p><%= item %></p>
+<% end %>
