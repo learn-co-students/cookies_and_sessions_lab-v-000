@@ -5,11 +5,14 @@ class ApplicationController < ActionController::Base
 
 
   def cart
-    @item = Item.find(params[:id])
-
-    cart = session[:cart] || []
-    cart << @item.id
-
-    session[:cart] = cart
+  
+  #  @item = Item.find(params[:id])
+    if session[:cart] == nil
+      cart =  []
+      session[:cart] = cart
+    else
+       session[:cart]
+      #cart << @product.id
+    end
   end
 end
