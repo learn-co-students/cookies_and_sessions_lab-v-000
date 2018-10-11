@@ -5,7 +5,8 @@ class ApplicationController < ActionController::Base
   helper_method :cart
 
   def cart
-    session[:cart] ||= []
+    #session[:cart] ||= []
+    @cart = session[:cart] ||= []
   #  @item = Item.find(params[:id])
 #    if session[:cart] == nil
 #      cart =  []
