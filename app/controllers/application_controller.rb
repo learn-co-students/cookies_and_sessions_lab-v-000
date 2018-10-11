@@ -5,14 +5,14 @@ class ApplicationController < ActionController::Base
   helper_method :cart
 
   def cart
-
+    session[:cart] ||= []
   #  @item = Item.find(params[:id])
-    if session[:cart] == nil
-      cart =  []
-      session[:cart] = cart
-    else
-       session[:cart]
+#    if session[:cart] == nil
+#      cart =  []
+#      session[:cart] = cart
+#    else
+  #     session[:cart]
       #cart << @product.id
-    end
+  #  end
   end
 end
