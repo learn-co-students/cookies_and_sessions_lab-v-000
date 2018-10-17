@@ -2,15 +2,13 @@ class ProductsController < ApplicationController
 
     def index
         # need a cart    @cart variable
-        @product = Product.all
-binding.pry        
+       session[ :cart_id]  = @cart_id
+       @cart = session[ :cart_id]
     end
 
     def add
-       @product = Product.find(params[:product])
        cart = session[:cart] || []
-       cart << @product.id
-       # push product into @cart
+    
        render :index
     end
 
