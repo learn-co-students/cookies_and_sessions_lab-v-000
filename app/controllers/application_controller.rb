@@ -5,8 +5,10 @@ class ApplicationController < ActionController::Base
 
 
     def cart
-           session[:cart] ||= []
+          @cart = session[:cart] ||= []
+          # because @cart is avaliable through the app.
+          # if we have it in session great or else, creates an empty array for cart
      end
-
+  
 
 end
