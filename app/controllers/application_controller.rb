@@ -3,9 +3,11 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  def cart
-    @product = Product.find(params[:id])
+  
 
-    current_cart << @product.id 
+  def cart
+    session[:cart] ||= []
   end
+
+
 end
