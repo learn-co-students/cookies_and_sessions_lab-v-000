@@ -6,9 +6,6 @@ class ProductsController < ApplicationController
     @cart = cart
   end
 
-  def new
-    @cart = cart
-  end
 
   def create
     #binding.pry
