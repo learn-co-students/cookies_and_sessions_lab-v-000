@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
 
   def create
     #binding.pry
+    cart << params[:product]
     redirect_to products_path
   end
 
