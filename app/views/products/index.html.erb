@@ -1,5 +1,5 @@
 <h1>Index</h1>
-<%@cart.each do |cart| %>
+<%= cart.each do |cart| %>
 <%= cart %>
 <%end%>
 <%= form_tag ({controller: "products", action: "add", method: "post"}) do |f| %>
