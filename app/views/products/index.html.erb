@@ -1,0 +1,9 @@
+<% cart.each do |product| %>
+  <%= product %>
+<% end %>
+
+<%= form_tag({controller: "products", action: "index"}, method: "post") do %>
+  <%= label_tag(:product, "product") %>
+  <%= text_field_tag(:product) %>
+  <%= submit_tag("add to cart") %>
+<% end %>
