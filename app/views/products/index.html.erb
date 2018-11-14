@@ -1,0 +1,11 @@
+<form action="/" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="product">Product Name</label>
+  <input type="text" name="product" id="product">
+  <input type="submit" value="Add To Cart" id="add to cart">
+</form>
+ <ul>
+<% session[:cart]&.each do |item| %>
+  <li><%= item %></li>
+<% end %>
+</ul>
