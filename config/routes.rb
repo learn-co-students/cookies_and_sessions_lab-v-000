@@ -55,4 +55,5 @@ Rails.application.routes.draw do
   #   end
 
   root 'products#index'
+  post 'add' => 'products#add'
 end
