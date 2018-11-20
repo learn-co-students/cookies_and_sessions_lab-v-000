@@ -1,0 +1,11 @@
+<%= form_tag(update_products_path, method: :put) do%>
+    <%= text_field_tag 'item', nil, placeholder: "Add item to cart...", id: "product" %>
+    <%= submit_tag 'Add to cart', id: "add to cart"%>
+<% end%>
+
+<h3><%= cart.length > 0 ? "Items in cart:" : "Cart is empty" %></h3>
+<ul>
+    <% cart.each do |item|%>
+        <li><%= item %></li>
+    <% end %>
+</ul>
