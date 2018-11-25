@@ -4,6 +4,9 @@ class ProductsController < ApplicationController
   end
 
   def add
-    binding.pry
+    @item = params[:product]
+    cart << @item
+    session[:cart] = cart
+    render :index
   end
 end
