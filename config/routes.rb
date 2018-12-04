@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
-     get '/' => 'products#index', as: :homepage
+     root 'products#index'
      post '/' => 'products#add'
      #get '/products/:id' => 'products#show', as: :add
 
