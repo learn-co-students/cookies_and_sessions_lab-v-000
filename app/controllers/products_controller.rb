@@ -1,11 +1,12 @@
 class ProductsController < ApplicationController
 
   def index
-
+   @cart = cart
   end
 
   def add
-    byebug
+    cart << params[:product]
+    redirect_to homepage_path
   end
 
 
