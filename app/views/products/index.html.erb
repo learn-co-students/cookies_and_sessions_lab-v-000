@@ -1,8 +1,8 @@
-<ul>
-  <%= cart.each do |product| %>
-    <li><% product %></li>
-  <% end %>
-</ul>
+
+<%= cart.each do |product| %>
+  <% product %>
+<% end %>
+
 
 <%= form_tag('/products', method: :post) do %>
   Name: <%= text_field_tag "product" %>
