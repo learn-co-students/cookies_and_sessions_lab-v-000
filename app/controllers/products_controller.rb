@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
 
         cart << params[:product]
 
-        # redirect_to products_path 
+        redirect_to root_path 
     end
 
 end
