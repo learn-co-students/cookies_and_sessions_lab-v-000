@@ -1,0 +1,17 @@
+
+<% if session[:cart].present? %>
+    <h1>Cart</h1>
+    <ul>
+        <% session[:cart].each do |item| %>
+        <li><%= item %></li>
+        <% end %>
+    </ul>
+<% end %>    
+
+<form action="/products/add" method="post">
+        Product: 
+        <input type="text" name="product" id="product">
+        <input type="submit" value="add to cart"> 
+
+</from>
+
