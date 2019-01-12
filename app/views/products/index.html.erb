@@ -1,0 +1,9 @@
+<h1>Products</h1>
+<p><%cart.each do |product|%></p>
+  <%=product%>
+<%end%>
+
+<%= form_tag('/') do %>
+  <%= text_field_tag 'product' %>
+  <%=submit_tag "add to cart"%>
+<% end %>
