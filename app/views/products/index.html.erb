@@ -1,0 +1,13 @@
+views/products/index file 
+
+<%= cart.each do |product| %>
+  <p><%= product %></p>
+  <br>
+<% end %>
+
+<%= form_tag({controller: 'products', action: 'add', method: 'post'}) do %>
+  <label>Product</label>
+  <input name="product"/>
+  <input type="submit" value="add to cart"/>>
+
+<% end %>
