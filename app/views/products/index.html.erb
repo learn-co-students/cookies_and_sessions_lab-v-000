@@ -1,0 +1,6 @@
+<% @cart = session[:cart]
+@cart.each do |cart| %>
+<ul>
+  <li><%= cart %> </li>
+  </ul>
+  <% end %>
