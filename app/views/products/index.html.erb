@@ -1,0 +1,23 @@
+<h1>Products Index Page</h1>
+
+<!--<ul>
+  <%# @products.each do |product| %>
+    <li><%#= link_to product.name, product_path(product) %></li>
+  <%# end %>
+</ul>-->
+
+<h1>Cart</h1>
+<ul>
+  <% if session[:cart].present? %>
+    <% session[:cart].each do |product| %>
+      <li><%= product %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<h1>Add a product to your cart:</h1>
+<%= form_tag product_cart_path do %>
+<%= label_tag :product %>
+<%= text_field_tag :product %>
+<%= submit_tag "add to cart" %>
+<% end %>
