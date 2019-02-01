@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+products = [{name: "Bananas"},
+         {name: "Batteries"},
+         {name: "Baked Goods"},
+         {name: "Beans"},
+         {name: "Bourbon"},
+         {name: "Bundt Cake"},
+         {name: "Broccoli"},
+         {name: "Butter"}]
+
+products.each do |product|
+  Product.create(product)
+end
