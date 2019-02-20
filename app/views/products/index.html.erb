@@ -1,0 +1,11 @@
+Products Index
+<ul>
+	<% cart.each do |item| %>
+		<li><%= item.to_s %></li>
+	<% end %>
+</ul>
+<%= form_tag do %>
+	<%= label_tag "Product" %>
+	<%= text_field_tag :product %>
+	<%= submit_tag "add to cart" , :id => 'add to cart', :method => 'post' %>
+<% end %>
