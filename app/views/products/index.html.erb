@@ -1,0 +1,15 @@
+<h1>Products in Your Cart</h1>
+
+<%= form_tag(products_path, method: :post) do %>
+  <%= text_field_tag :product, nil, class: 'product_add_field', placeholder: "enter product..." %>
+  <br>
+  <%= submit_tag "add to cart", class: "add_button"%>
+<% end %>
+  <%session[:cart].each do |product| %>
+    <ul>
+      <li>
+        <%= product %>
+        <%= button_to "remove", products_path, params: {product: product}, method: :delete, data: {confirm: "Are you sure?" } %>
+      </li>
+    </ul>
+  <% end %>
