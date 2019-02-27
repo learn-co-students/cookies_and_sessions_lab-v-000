@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 RSpec.describe ApplicationController do
   describe 'cart' do
     it "returns the user's shopping cart, an initially empty array" do
