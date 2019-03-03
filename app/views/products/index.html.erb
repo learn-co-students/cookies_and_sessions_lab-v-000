@@ -1,0 +1,17 @@
+<%= form_tag products_index_path do %>
+  <label>Add item to your cart:</label><br><br>
+  <input type="text" name="cart" id='product'><br><br>
+
+  <input type="hidden" name="authenticity_token" value= "<%= form_authenticity_token %>">
+
+  <input type="submit" value="Add to Cart" id='add to cart'><br><br>
+<% end %>
+
+<h1> Your Current Cart: </h1>
+  <% if cart.empty? %>
+    <p> Your cart is empty </p>
+  <% else %>
+    <% cart.each do |product| %>
+        <%= product %>
+  <% end %>
+<%end %>
