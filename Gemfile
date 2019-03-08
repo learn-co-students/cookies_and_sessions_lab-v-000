@@ -42,4 +42,8 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.7'
   gem 'capybara'
+  gem 'rb-readline'
+  gem 'pry'
+  gem 'pry-coolline'
+
 end
