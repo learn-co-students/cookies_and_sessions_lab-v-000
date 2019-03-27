@@ -1,0 +1,11 @@
+<!-- # form for is for grabbing things from models, which doesn't apply here. you can either use form tag  -->
+<!-- or just create a form directly with html  -->
+
+
+
+
+<%= form_tag products_path do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Add Product") %>
+<% end %>
