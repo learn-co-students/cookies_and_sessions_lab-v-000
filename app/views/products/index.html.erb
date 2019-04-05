@@ -1,11 +1,12 @@
 <h1>Products#index</h1>
 <div class="">
   <h3>Your Cart</h3>
-
+  <ul>
   <% cart.each do |product| %>
-    <p><%= product %></p>
+    <li><%= product %></li>
   <% end %>
-
+  </ul>
+  
   <%= form_tag products_add_path do %>
     <%= label_tag :product %>
     <%= text_field_tag :product %>
