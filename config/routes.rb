@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :products, only: :index
-  root :to => "products#index"
-  post "/products", to: "products#add"
+
+  root "products#index"
+  post "/" => "products#add"
+   # get "/products", to: "products#index"
 
 end
 
