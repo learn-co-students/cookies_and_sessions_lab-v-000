@@ -1,0 +1,12 @@
+<ul>
+<% @items.each do |item| %>
+
+  <li><%= item.name %></li>
+  <% end %>
+</ul>
+
+<form action="/products/add" method="post">
+  <label for="product"></label>
+  <input type="text" name="product" id="product">
+  <input type="submit" value="add to cart">
+</form>
