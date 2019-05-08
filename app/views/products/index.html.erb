@@ -1,4 +1,8 @@
-<% @products.each do |product| %>
-product
-<%= binding.pry %>
+<%= form_tag "/products" do %>
+  <%= text_field_tag :product %>
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+<% cart.each do |product| %>
+<%= product %>
 <% end %>

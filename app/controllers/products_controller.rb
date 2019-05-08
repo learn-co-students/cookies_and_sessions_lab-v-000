@@ -1,12 +1,15 @@
 class ProductsController < ApplicationController
 
-def index
-@products = Product.all
-end
+  def index
+    #@products = Product.all
+    # @cart = cart
 
-def add
+  end
 
-  session[:cart] << @item
-end
+  def add
+    #binding.pry
+    cart << params[:product]
+    render :index
+  end
 
 end
