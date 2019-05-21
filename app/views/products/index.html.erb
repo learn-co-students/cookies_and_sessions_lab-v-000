@@ -7,5 +7,7 @@
 <% end %>
 
 <ul>
-  <%= cart %>
+  <% cart.each do |product| %>
+  <li><%= product%></li>
+    <% end %>
 </ul>
