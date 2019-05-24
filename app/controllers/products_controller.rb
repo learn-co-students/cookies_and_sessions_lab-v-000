@@ -1,4 +1,4 @@
-class ProductsController < ActionController::Base
+class ProductsController < ApplicationController
 
 
   def index
@@ -7,7 +7,8 @@ class ProductsController < ActionController::Base
   def add
   # Load the cart from the session, or create a new empty cart.
     cart << params[:product]
-    render :index
+    redirect_to '/'
+
   end
 
 end
