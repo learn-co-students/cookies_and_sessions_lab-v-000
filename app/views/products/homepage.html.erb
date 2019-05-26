@@ -1,0 +1,6 @@
+<h1>Add item to your shopping cart</h1>
+
+<%= form_tag products_add_url do %>
+  <%= text_field_tag :product %>
+  <%= submit_tag :"add to cart" %>
+<% end %>
