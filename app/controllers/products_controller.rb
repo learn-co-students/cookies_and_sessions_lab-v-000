@@ -1,9 +1,6 @@
 class ProductsController < ApplicationController
 
-   
-
-    def index
-      cart
+    def index   
     end
 
     def add
