@@ -1,4 +1,4 @@
-class ProductsController < ActiveRecord::Base
+class ProductsController < ApplicationController
 
   def index
   end
