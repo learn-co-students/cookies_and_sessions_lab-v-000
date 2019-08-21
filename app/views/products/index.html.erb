@@ -1,0 +1,27 @@
+
+<form action="/" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="">Product:</label>
+  <input type="text" id="product" name="product"><br>
+
+  <input type="submit" value="add to cart">
+
+</form>
+
+<br><br>
+
+<h1>Products</h1>
+<ul>
+  <% cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+</ul>
+
+
+<%# Ruby way to build form using form_tag - not form_for because it can only
+work with an instanciated object not an empty array or nil object  %>
+ <%# <%= form_tag "/", :method => "post" do  %> %>
+ <!-- <label>Product: </label>
+  <input type="text" id="product" name="product">
+  <input type="submit" value="add to cart"> -->
+ <%# <% end %> %>
