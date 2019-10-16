@@ -4,9 +4,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # https://learn.co/tracks/full-stack-web-development-v8/module-13-rails/section-12-authentication/cookies-and-sessions-lab
+
   # new code start
   helper_method :cart
 
+  # Create the cart method in ApplicationController#cart,
+  # this method should return an array of the items stored in the cart
+  # (utilizing the Rails session method).
   def cart
     session[:cart] ||= []
   end
