@@ -1,6 +1,6 @@
 # Illustration of this lab is available here:
 
-<p class='util--hide'>View <a href='https://i.imgur.com/2XJZTp5.jpg'>Cookies & Sessions Illustrated</a> on Learn.co and start learning to code for free.</p>
+<p class='util--hide'><a href='https://i.imgur.com/2XJZTp5.jpg'>Cookies & Sessions Illustrated</a></p>
 
 
 # Cookies and Sessions Lab
