@@ -1,3 +1,6 @@
+# Illustration of this lab is available here:
+<p><a href='https://i.imgur.com/2XJZTp5.jpg'></p>
+
 # Cookies and Sessions Lab
 
 ## Objective

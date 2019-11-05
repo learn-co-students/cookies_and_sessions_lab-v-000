@@ -1,9 +1,10 @@
-# https://github.com/learn-co-students/cookies_and_sessions_lab-v-000/pull/1061/files
-# new code start
+# Illustration of this lab is available here:
+# https://i.imgur.com/2XJZTp5.jpg
 class ProductsController < ApplicationController
   # Create a Products controller with two actions, index and add.
-  def index
-  end
+  # NOTE: this code is not used or required to pass the tests
+  # def index
+  # end
 
   # def add
   #   item = params["product"]
@@ -13,6 +14,7 @@ class ProductsController < ApplicationController
 
   # Create a Products controller with two actions, index and add.
   def add
+    # raise params.inspect
     cart << params[:product]
     render :index
   end
