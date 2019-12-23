@@ -7,4 +7,10 @@ class ProductsController < ApplicationController
   def add
   end
 
+  def create
+    cart << params[:product]
+    redirect_to products_path
+  end
+
+
 end
