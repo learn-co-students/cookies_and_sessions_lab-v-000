@@ -1,0 +1,15 @@
+<ul>  
+  <%= cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+</ul>
+
+<br>
+
+
+<form action= "/" method="POST"> 
+    <label> Product </label> 
+    <input type="text" id="product" name="product">
+    <input type="submit" value="add to cart">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+</form> 
