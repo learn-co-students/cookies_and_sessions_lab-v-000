@@ -1,0 +1,23 @@
+<!-- Illustration of this lab is available here: -->
+<!-- https://i.imgur.com/2XJZTp5.jpg -->
+<!-- https://github.com/learn-co-students/cookies_and_sessions_lab-v-000/pull/1061/files -->
+
+<!--
+Create views using the feature tests as your guide. The page should have,
+at a minimum: a text box where the user can enter the name of a product,
+a submit button that adds it to their cart, and a display of what's in the cart.
+-->
+
+<!-- new code start -->
+<h1>app/views/products/index.html.erb</h1>
+<ul>
+  <% cart.each do |cart_item| %>
+  <li><%= cart_item %></li>
+  <% end %>
+</ul>
+
+<%= form_tag("/") do %>
+  Product: <%= text_field_tag "product" %><br>
+  <%= submit_tag "add to cart" %>
+<% end %>
+<!-- new code end -->
