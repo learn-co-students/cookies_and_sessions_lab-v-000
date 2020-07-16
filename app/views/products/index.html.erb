@@ -1,0 +1,12 @@
+<h3>Cart Contents:</h3>
+<ul>
+  <% @cart.each do |item| %>
+    <li><%= item %></li>
+  <% end %>
+</ul>
+
+<h5>New Product</h5>
+<form action="add" method="post" >
+  <input type="text" name="prduct"> <br>
+  <input type="submit">
+</form>
