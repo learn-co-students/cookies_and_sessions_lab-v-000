@@ -1,0 +1,21 @@
+<h1>Your cart.</h1>
+<p>Why is the link not called your cart? Idk, seems contrived to me.</p>
+
+
+
+<%= form_tag(products_add_path) do %>
+  <%= text_field_tag(:product) %>
+  <%= submit_tag("add to cart") %>
+<% end %>
+
+<table style="border: black solid 1px">
+  <tr> Your Cart(put things in me) </tr>
+  <tr><th>Item</th> <th>Price</th></tr>
+  <% cart.each do |item| %>
+    <tr> <td><%= item %></td> <td>$[Object object]</td> </tr>
+  <% end %>
+</table>
+
+<%= form_tag(products_clear_path) do %>
+  <%= submit_tag("Save money? Clear cart!") %>
+<% end %>
