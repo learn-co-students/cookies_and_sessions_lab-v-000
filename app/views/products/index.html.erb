@@ -1,0 +1,18 @@
+<h1>Products</h1>
+
+<!-- this code needs to go above the form or the form assumes a GET even with all of the below specified -->
+<% if !cart.empty? %>
+    <ul>
+        <% cart.each do |item| %>
+            <li><%= item %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+<!-- I pulled this syntax from the solution as well. I reviewed my notes and we never go over any of this syntax so I'm not sure how we would know to do this. I guess I know it now! -->
+<%= form_tag ({controller: "products", action: "add", method: "post"}) do %>
+    <%= text_field_tag :product %>
+    <%= submit_tag value="add to cart" %>
+<% end %>
+
+
